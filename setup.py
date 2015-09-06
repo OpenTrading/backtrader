@@ -104,14 +104,14 @@ setuptools.setup(
     # project is installed. For an analysis of "install_requires" vs pip's
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['six'],
+    install_requires=['six', 'matplotlib>=1.4.1'],
 
     # List additional groups of dependencies here
     # (e.g. development dependencies).
     # You can install these using the following syntax, for example:
     # $ pip install -e .[dev,test]
     extras_require={
-        'plotting':  ['matplotlib'],
+#        'plotting':  ['matplotlib>=1.4.1'],
     },
 
     # If there are data files included in your packages that need to be
@@ -130,4 +130,4 @@ setuptools.setup(
     # pip to create the appropriate form of executable for the target platform.
     # entry_points={'console_scripts': ['sample=sample:main',],},
     scripts=['tools/bt-run.py'],
-)
+    zip_safe=False,)

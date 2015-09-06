@@ -1,0 +1,4111 @@
+commit 660fe388dc85fa9c93d6f10cb493f037fd7273e5
+Merge: 9649cde 0c8e4fe
+Date:   Thu Aug 27 23:36:24 2015 +0200
+
+    Release 1.1.5.88
+
+commit 0c8e4fe9a594d9176da5027305248ed3980e6103
+Date:   Thu Aug 27 23:34:57 2015 +0200
+
+    Release 1.1.5.88
+
+commit 8a0b2ca01f052ede6c322861aa06d1f678983b16
+Date:   Thu Aug 27 23:34:38 2015 +0200
+
+    Release 1.1.5.88
+
+commit 70d4f727fa2797dc8afb7be4747fd570d63af55e
+Date:   Thu Aug 27 23:27:26 2015 +0200
+
+    Add datas and data aliases from strategy
+
+commit afb4832965c66a8880137c127849244334c038c8
+Date:   Thu Aug 27 00:54:10 2015 +0200
+
+    LineBuffer receives a LineForward object for positive "indices" in delayed objectss
+
+commit bdd340d50f09b5c2e0a4f3869c93b10e42192fd3
+Date:   Thu Aug 27 00:53:34 2015 +0200
+
+    Analyzer base class defines default get_analysis and print and pprint methods
+
+commit 8eb7d8835c7c2825d480fd1d00a95fe5954f5bfe
+Date:   Thu Aug 27 00:53:05 2015 +0200
+
+    bt-run rework and documentation rework
+
+commit 082c9cb2cfb0ba69340dc40edf4f05b8b256dc54
+Date:   Wed Aug 26 13:46:12 2015 +0200
+
+    Refactored access to LineMultiple line management methods to allow super calling to implement controlled management of separated lines
+    
+    The lines of a LineMultiple data subdivided as multiple datas automatically for Indicators will not be managed (when managed leads to a n-reduction of the run due to multiple management)
+    
+    Corrected advance missing size parameter in overriden methods (was not actually used)
+
+commit ca80b7e16d3158bea7c56b7c120f7752aeaa350b
+Date:   Tue Aug 25 23:44:18 2015 +0200
+
+    Restore lookahead in cerebro
+
+commit 0bdc57cd755b70291812ce7744b9c45376f94470
+Date:   Tue Aug 25 14:30:48 2015 +0200
+
+    bt-run support for indicator injection into strategies
+
+commit f09639ad009d13118d8625d984224383de247c3e
+Date:   Tue Aug 25 14:30:12 2015 +0200
+
+    Cerebro supports addition of Indicators that will be injected to the strategies
+
+commit 5b5c6539f08d8f8ecdbb57a4ff09a0f19f83d714
+Date:   Tue Aug 25 14:29:46 2015 +0200
+
+    Strategy does now the minimum period calculations in _start rather than in postinit, to allow injection of indicators for 3rd parties like cerebro and analyzers.
+    
+    Refactoring of stage2 to _start and addition of stage1 to _stop
+    Addition of indicator classes before _start at anytime via _addindicator supported
+
+commit e1ade8ef671ca2c3b3d8349986893d1318256070
+Date:   Tue Aug 25 14:26:42 2015 +0200
+
+    Lineiterator refactoring of last second minimum period calculation to allow reusability if needed be
+
+commit 8a468e670c9534c883b10199e6f68e69afd693e9
+Date:   Tue Aug 25 14:25:31 2015 +0200
+
+    Added stage1 internal function to LineIterator to allow reversal to standard operator mode at the end of backtesting
+
+commit 9649cde92ea081ef1002299c2300565061385ef6
+Merge: 345febb 8d3f4ac
+Date:   Tue Aug 25 00:51:10 2015 +0200
+
+    Release 1.1.4.88
+
+commit 8d3f4ac5e6a3fee13e11f282cb53f57ef440fb10
+Date:   Tue Aug 25 00:42:11 2015 +0200
+
+    Merge branch 'development'
+    
+    Conflicts:
+    	backtrader/__init__.py
+    	changelog.txt
+
+commit de642e7c1a962c916d565bf0de9c8dbe82b4d077
+Date:   Tue Aug 25 00:24:02 2015 +0200
+
+    Changelog update
+
+commit bb6268aeb2bb0a84a49516552cc927976045ecbb
+Date:   Tue Aug 25 00:21:03 2015 +0200
+
+    bt-run accepts kwargs per loaded object (strategy, observer, analyzer) and can load the default Strategy object if none is specified
+
+commit 77e8d76a7679743f71921fb0ff09c6ea96c4afab
+Date:   Tue Aug 25 00:20:11 2015 +0200
+
+    Version bump
+
+commit fa1e1d31da8a5c62eca2bc94d447a2a2a8b5aa10
+Date:   Mon Aug 24 23:10:54 2015 +0200
+
+    SMA_CrossOver refactoring and documentation
+
+commit e675479ac15a96280d54ad957d6c2efbdaf87cfc
+Date:   Mon Aug 24 23:10:17 2015 +0200
+
+    Documentation addition of auto-documenting built-in strategies
+
+commit 5ce02f30c93c4203efbc9cf20f6c2e365f3f94d9
+Date:   Mon Aug 24 23:09:57 2015 +0200
+
+    Strategy supports autodocumentation and is added to the directives
+
+commit 33935a9ac4f0036219573725dc15162e2ed9640a
+Date:   Mon Aug 24 23:09:26 2015 +0200
+
+    Removal of post label in data-replay doc
+
+commit 306cd79af6134f39e79801f8a6a173d2f4c586d4
+Date:   Mon Aug 24 23:09:06 2015 +0200
+
+    Further doc updates removing wikipedia wrongdoings that were corrected for Welles indicators
+
+commit e3e6e98b8fe5da4bcb4118154fd0ecdcbea3eba8
+Date:   Mon Aug 24 22:32:46 2015 +0200
+
+    Data Replay documentation update
+
+commit 4c5f230e7fa230447fbafcd8ebdef6012dfeeee6
+Date:   Mon Aug 24 21:20:24 2015 +0200
+
+    Removed old data kwarg to resampler base to use standard DataBase feed "dataname" and adjusted test cases
+
+commit b863da05eb80c1b5a94f9a08a3c2aa1e268013bc
+Date:   Mon Aug 24 21:19:44 2015 +0200
+
+    Improve multi timeframe support by supporting case in which larger timeframe has no indicators and plays no role in determining the minimum period
+
+commit 8126d96c0acfb29b29512ad7a4ae5123f319eeca
+Date:   Mon Aug 24 21:18:55 2015 +0200
+
+    Cosmetic corrections/additions to bt-run.py
+
+commit 7af03dee7d75d5d5b12f296047d0b579b2ad123d
+Date:   Mon Aug 24 21:18:33 2015 +0200
+
+    Further documentation rework
+
+commit 2a6bbd3aa06bc2a54a8055b83ad2ace467a1f2c2
+Date:   Sun Aug 23 16:43:11 2015 +0200
+
+    resampler correction: rewind data in preload mode if resampled bar has gone over the limit
+
+commit f75765123759a9fc2e8b9711cdf51948bd868ad2
+Date:   Sun Aug 23 16:42:36 2015 +0200
+
+    strategy setsizer docstring correction
+
+commit 80ce18b87c3f045c7f0f01aaebb40e62524bdaa4
+Date:   Sun Aug 23 01:42:39 2015 +0200
+
+    Documentation major works including refactoring for Datafeed autodocumentation
+
+commit f85b9a40e94ab2bf9d4a0fe8ce9c16fd8957f9b2
+Date:   Sat Aug 22 02:40:13 2015 +0200
+
+    Documentation update
+
+commit 02016903c143ce85124eb99dd4dd736e196470c9
+Date:   Sat Aug 22 02:39:56 2015 +0200
+
+    blaze data support and extra pandas feed class with a direct tuple/index approach
+
+commit 345febb1b651f440558533dc3900591326f04778
+Merge: ded3519 09d93a3
+Date:   Fri Aug 21 11:34:19 2015 +0200
+
+    Merge branch 'development'
+
+commit 09d93a3471b2d6252a7388ae9225d01cb7a236e2
+Date:   Fri Aug 21 11:17:08 2015 +0200
+
+    Extra travis.yml correction for missing whitespace
+
+commit 02a73a032b0663c8ded8e7c3d9e52cd99bd5a5c3
+Date:   Fri Aug 21 10:47:17 2015 +0200
+
+    Re-correction for travis to exclude plot
+
+commit 3eeacbc8730e393570c8f24e0f2a55f68d54d9fb
+Date:   Fri Aug 21 10:43:21 2015 +0200
+
+    Correct pandas import for travis testing and restore travis requirements installs
+
+commit 89f30d7dd2e1aafb6afe9c9f931a54177aaaf6ee
+Date:   Fri Aug 21 08:35:33 2015 +0200
+
+    More travis changes to improve testing reducing dependencies and time
+
+commit cd7a8a3426887145c073448bc9c9a0b68a1feaa0
+Date:   Fri Aug 21 08:30:58 2015 +0200
+
+    Tell travis to install pandas before testing and test from tests directory
+
+commit ded35195e7f7c0e8ffcd0ecf2daae71bae744323
+Date:   Fri Aug 21 08:26:23 2015 +0200
+
+    Release 1.1.3.88
+
+commit ef993011272dba587c01f6c7f676bf332b6c8a39
+Merge: ed819d5 d431da2
+Date:   Fri Aug 21 08:16:28 2015 +0200
+
+    Merge branch 'development'
+
+commit d431da2ef37029efc59a4ba8d3a14dea71c05d6f
+Date:   Fri Aug 21 08:15:49 2015 +0200
+
+    Improved autodetection of pandas column names/numeric indices simplifying the default parameters for the datafields
+
+commit 12f6e17b3fef2dcbf03daac6e7e45679caebe12f
+Date:   Fri Aug 21 02:00:57 2015 +0200
+
+    Pandas DataFeed support
+
+commit ed819d565543ad329a07c319c762f9347d9c428b
+Merge: f160333 54bec50
+Date:   Thu Aug 20 15:22:26 2015 +0200
+
+    Merge branch 'development'
+
+commit 54bec5081acccf4996cd51184ca92a7dbe17c5a7
+Date:   Thu Aug 20 15:21:04 2015 +0200
+
+    Further OrderedDict corrections for Python 2.6 compatibility
+
+commit d9097de54f3b75e60c05a60edeb3ff5cd65ce584
+Date:   Thu Aug 20 15:12:21 2015 +0200
+
+    Use standard local utils import for all OrderedDict imports
+
+commit ff8dc6a500b9249e5bb7ca1bccc3eaf5ffc18326
+Date:   Thu Aug 20 14:09:08 2015 +0200
+
+    Import correction for Python 2.6 ordereddict
+
+commit 966addc5ec1a9bcdb7c1e595a8b47d1b947ef2d3
+Date:   Thu Aug 20 13:59:13 2015 +0200
+
+    Python version check compatibility changes for Python 2.6
+
+commit 1560fa88021811c85ba94d4b6497d15322cbc1ed
+Date:   Wed Aug 19 22:30:29 2015 +0200
+
+    Set a default reference price (close) for order creation if no price and no pricelimit are specified
+
+commit f95f46f80788637bce897fc1e2c60f5ba4724e79
+Merge: 9924f06 f160333
+Date:   Wed Aug 19 10:06:27 2015 +0200
+
+    Merge branch 'master' into development
+
+commit f1603334d70175ac526a7777ec87f4a8af92d2bf
+Merge: 701a5a9 9924f06
+Date:   Tue Aug 18 23:18:52 2015 +0200
+
+    Merge branch 'development'
+
+commit 9924f062e24a06c756713db46ac05fee531ea00e
+Date:   Tue Aug 18 23:16:51 2015 +0200
+
+    len method for analyzers using the owning strategy
+
+commit da2ef60b9f5089943726406d821e3d26bfdc1b50
+Date:   Tue Aug 18 23:05:43 2015 +0200
+
+    Improved observer support in strategy in case observer subclasses want to override prenext/nextstart
+
+commit 54a63230af9f30566a53ae1073d5a869b84c7fc6
+Date:   Tue Aug 18 23:05:13 2015 +0200
+
+    Analyzers refactored to new model which allows a start/stop/next approach
+
+commit 374b0d4e3c39f973c75bf6e9cc668176c81c08f9
+Date:   Tue Aug 18 23:04:26 2015 +0200
+
+    Move Analyzer support from Cerebro to Strategy
+
+commit 2d66440cd6f53d4c87300b352edf0a1026a816ee
+Date:   Tue Aug 18 23:03:47 2015 +0200
+
+    Support for Analyzers in completely in Strategy
+
+commit d080532fae456ee025c87e3de542bcc3f19e4b7f
+Date:   Tue Aug 18 23:02:17 2015 +0200
+
+    Strategy gets wrapping _start/_stop methods which will then invoke the analyzers _start/_stop methods
+
+commit ab035bc9bb2d185187c91be250bc3f80934c9d9e
+Date:   Tue Aug 18 23:01:04 2015 +0200
+
+    Observer gets a default prenext that calls next
+
+commit f592fb1ff48a661bf28f71ebe5f129ddf0ab005f
+Date:   Mon Aug 17 00:42:26 2015 +0200
+
+    Add Analyzer support to bt-run and cosmetic clean-up
+
+commit 0e946a2c25af0f6d6ecde187db2978eafc434ddc
+Date:   Mon Aug 17 00:41:53 2015 +0200
+
+    Cerebro support for Analyzers
+
+commit 5584703847a1d94d4fed5d5771b0445807080da3
+Date:   Mon Aug 17 00:41:31 2015 +0200
+
+    AnnualReturn/SharpeRation analyzers and imports added
+
+commit c3e5e1e50bfbdf8207178f87ca883772f65999aa
+Date:   Mon Aug 17 00:40:16 2015 +0200
+
+    Add analyzer base module and import
+
+commit 5e12c8418578a26cc8a312be2f5002280de1ee88
+Date:   Mon Aug 17 00:39:30 2015 +0200
+
+    Extension of Template to support iteration and names
+
+commit d8ba9a2189b4078fc4185a74d631f9f03d0cc569
+Date:   Mon Aug 17 00:38:35 2015 +0200
+
+    cerebro returns a list of strategies (rather than a list of lists) if no optimization is being done because there is only 1 set of strategies
+
+commit 8d0bfd59b436d5942c27065be5b74b4aa08b0897
+Date:   Mon Aug 17 00:37:10 2015 +0200
+
+    Addition of basic mathsupport module meant for statistics (average, variance, stddev)
+
+commit 5df90c4021245b9a0d5601419dfd7afe05e419f9
+Date:   Mon Aug 17 00:36:32 2015 +0200
+
+    Rework OrderedDict import in utils to make it more visible to other modules
+
+commit 1f58eca735606055b24998d8935c18b48904f1ae
+Date:   Mon Aug 17 00:35:46 2015 +0200
+
+    linebuffer add getzeroval to get a single value from the real base 0 index
+
+commit fa853548c1923452fddab5415dba37e451892a50
+Date:   Sun Aug 16 14:19:37 2015 +0200
+
+    Sample strategy SMA_CrossOver
+
+commit e28770668d42241f4c33d0397d3b2023a18d3686
+Date:   Sun Aug 16 14:19:22 2015 +0200
+
+    Generic execution script bt-run.py
+
+commit 8d95c33a23011ee7daf16f546088de95acdefa20
+Date:   Sun Aug 16 00:31:39 2015 +0200
+
+    order execution sample added
+
+commit 701a5a964581a26dec7300f0645d4951d6307426
+Date:   Sat Aug 15 10:32:34 2015 +0200
+
+    Release 1.1.2.88
+
+commit 3f283e36e6b6fb7631ee940480e7d4df85872e69
+Date:   Sat Aug 15 10:19:28 2015 +0200
+
+    VisualChart binary file direct data feed support
+
+commit b0046d27ff2d9332539442ec2b520e01aa72801a
+Date:   Sat Aug 15 10:13:47 2015 +0200
+
+    broker change to "Close" execution llogic using new order end of session calculated time
+
+commit 3f41b87873684c322ede425533e67b219365a1e1
+Date:   Sat Aug 15 10:12:44 2015 +0200
+
+    broker suppor for tick_xxx prices to execute the orders with the same logic in normal and replay mode
+
+commit e56b0788b989f29b05adc69f5b23957b8fa6611e
+Date:   Sat Aug 15 10:10:17 2015 +0200
+
+    order receives new attribute to calculate the next end of session to better support "Close" orders
+
+commit 7d8fe7a4277522be5d76db9cd8428a6610539fea
+Date:   Sat Aug 15 10:09:02 2015 +0200
+
+    replay fills up the tick values used to reconstruct a larger bar
+
+commit 32007a0b9bd23f0e29d98ff728373ba9fbc65698
+Date:   Sat Aug 15 10:08:27 2015 +0200
+
+    Resampler uses isoweek instead of the wall calendar week to ensure weeks crossing over the year border are consistent
+
+commit b5b898774521d684e855d975faecbdc807acb865
+Date:   Sat Aug 15 10:07:12 2015 +0200
+
+    Support in feed DataBase to see what the last tick values are in the form of self.tick_xxx (open, high, low, close, volume, openinterest). Unless a real time data feed or replay is active, these will be same values as the current bar (self.lines.open, ...)
+
+commit 6315716a642b2188ebcbd001bb8dbaf5e2d8d62e
+Date:   Wed Aug 12 23:17:09 2015 +0200
+
+    Observers documentation
+
+commit afab6c4dc4867179e7c322a4b8dc6e677fa7bd78
+Date:   Tue Aug 11 23:11:02 2015 +0200
+
+    Generic Data Feed Development Documentation
+
+commit 2a3be8fcaf9cd0a7577dc2cbd31899fbd8a53143
+Date:   Tue Aug 11 14:44:10 2015 +0200
+
+    Issue #11 Close orders now not only support DataReplay but regular close price with the next bar
+
+commit a6f2a84627a264c80b364ba4a83e4182865ea322
+Date:   Mon Aug 10 23:53:45 2015 +0200
+
+    Python correction for next in order id generation for Python 3
+
+commit 9d0ddc3be6c553ca20fd075d3a2ec5b24a8a68d0
+Date:   Mon Aug 10 23:43:34 2015 +0200
+
+    Release 1.1.1.88
+
+commit a49bf99ed1c65c04d6ba14f39251cd943a74bfa9
+Date:   Mon Aug 10 23:42:52 2015 +0200
+
+    Documentation on order creation and execution
+
+commit b206e3673c624db8cf8db76cd2a03401f23eeb08
+Date:   Mon Aug 10 23:32:12 2015 +0200
+
+    broker clarification on how to detect BuyOrders (use method rather than isinstance) and use of pcreate for limit orders (even if plimit should be the same)
+
+commit 6aceab4c14ec1bed746b0236a06c2d95ba457d40
+Date:   Mon Aug 10 23:30:55 2015 +0200
+
+    Corrections to Order to avoid redefinition of enum for Stop, StopLimit, right initial setup of "triggered" for stoplimit orders and assignment of pricelimit for OrderData
+
+commit 56bbbd396f7f9ff504f74546cf79e63c05d58191
+Date:   Mon Aug 10 21:39:19 2015 +0200
+
+    Add missing notification for order "accept" and notifications uses clones to notify unique statuses per event
+
+commit 4e3ad5335a9aafdcae176320c7dd87c87ea5e1b3
+Date:   Mon Aug 10 21:38:38 2015 +0200
+
+    Order gets unique id per instance and can smartly clone itself
+
+commit 264a93193371048783573dd1e56d7520f0b2465f
+Date:   Mon Aug 10 19:59:25 2015 +0200
+
+    Correct correction of date assignment to order execution when expired
+
+commit b446391050038f5ced25c88669896893466a0c7c
+Date:   Fri Aug 7 00:00:28 2015 +0200
+
+    Correction to typo in plimit for order execution
+
+commit 2c245de35aaf731acb0544a10b9d1308e70539b3
+Date:   Thu Aug 6 23:56:35 2015 +0200
+
+    Improvements to order api from strategy
+
+commit 9290b3f3c48fcb92064437bceb9cf0fe86deb254
+Date:   Thu Aug 6 05:53:59 2015 +0200
+
+    Check and automatic conversion of Order "valid" param to float if a non-float is passed (assumed datetime) #8
+
+commit 570bbba01e948f2164216a1258dde503910663ef
+Date:   Wed Aug 5 23:52:29 2015 +0200
+
+    Data Feed development updates
+
+commit 8340f1f5f4c81c47de50776eb7d357b0731f074f
+Date:   Wed Aug 5 23:52:08 2015 +0200
+
+    Add SierraChart CSV support
+
+commit 862f23f4cc1774735b9d3c34498f272cf0bc10f5
+Date:   Tue Aug 4 23:24:47 2015 +0200
+
+    Documentation addtion: datafeeds
+
+commit d5fe933b7334f810d77738bb54bd27f1281b97c6
+Date:   Tue Aug 4 11:04:46 2015 +0200
+
+    replaced str with string method decode using utf-8 to parse the datetime format under python 3 (#6)
+
+commit 8ca967f9dd997cce190ab4a90cc2380495eef569
+Date:   Tue Aug 4 10:25:40 2015 +0200
+
+    Add "str" safeguard for Python 2/3 compatibility in GenericCSV (addresses #6)
+
+commit 2ab2b39c024f09c0b96f42340da7170e96c624a8
+Date:   Tue Aug 4 01:21:30 2015 +0200
+
+    GenericCSVDataFeed
+
+commit 1445753ff9f901fef01f0370e570f17f42303976
+Date:   Mon Aug 3 13:53:35 2015 +0200
+
+    Fixes #3 cash set even if the broker is not initialized
+
+commit 86507b6028ecaf812d7d31f9a7677d6d3ae718d8
+Date:   Mon Aug 3 12:00:43 2015 +0200
+
+    Quickstart corrections to account for changes in conventions and apply new trade and notify_trade possibilities
+
+commit 76f2a5ce427e22e4e5b19124ca3f72aa75564fb6
+Date:   Sun Aug 2 23:38:35 2015 +0200
+
+    Release 1.1.0.88
+
+commit 6bba3fd235324e3366705ed2cdbbddd64d8a2a6b
+Date:   Sun Aug 2 23:34:35 2015 +0200
+
+    Removal of analyzer references and refactored the inclusion of observers as stats, whilst (temporarily) removing the ObserverPot classes
+
+commit 64413f02fbeac187a3ab7bee04ae8436dd5a3aad
+Date:   Sun Aug 2 23:31:37 2015 +0200
+
+    Removed old analyzer paradigm and renamed cashvalue observer to broker
+
+commit fda71b4730366523f317fb7bcbd89b655d54e6f1
+Date:   Sat Aug 1 23:59:46 2015 +0200
+
+    Multicursor change of parameters for default behavior (multiple across vertical ... single on horizontal axis)
+
+commit 632c0032df0a4ddb5f0634db05d3d0fa382d2905
+Date:   Sat Aug 1 23:56:42 2015 +0200
+
+    More Position/Operation/Trade refactoring
+
+commit c5c766632ad9b4ca8f296051ff16f48a26754cbf
+Date:   Sat Aug 1 23:56:19 2015 +0200
+
+    Extra Operation/Position/Trade refactoring
+
+commit f2d5e24df9b9b58fa92e398c520eb03e06933852
+Date:   Sat Aug 1 23:44:26 2015 +0200
+
+    Observer and Operations/Trades refactoring (and addition of drawdown)
+
+commit 74e808f9a24fb1dd6b95139422bda00bd121c3ba
+Date:   Sat Aug 1 00:52:45 2015 +0200
+
+    Broker passed pnl info on closed sizes to orders. Strategy uses the information to create/update operations which are kept in a list and pending queue and can be seen by (for example) an Operations Observer. Tests updated for new comminfo and Operation parameters to methods
+
+commit a4ae09889b0a7688b80af2c5455a10965c188b23
+Date:   Sat Aug 1 00:49:38 2015 +0200
+
+    Commission info change to unused profitandloss method to make it useful and used in the broker to pass pnl info to the order
+
+commit 6010ef964b36d71f210b4e39253a7365cdf9010b
+Date:   Sat Aug 1 00:32:21 2015 +0200
+
+    Protected "observer" instances being created in Analyzer
+
+commit ee5932d76263a5d81701b2491ef280cac9d64543
+Date:   Fri Jul 31 14:40:51 2015 +0200
+
+    doc correction for commission-schemes
+
+commit 8ed16776f0985832e26b58cf1aec6097a0ead1d4
+Date:   Tue Jul 28 20:07:16 2015 +0200
+
+    Corrected link to gitter
+
+commit 20e7b2556857847632aa6ef551fa3bb798dce7a6
+Date:   Tue Jul 28 20:06:07 2015 +0200
+
+    Gitter badge
+
+commit 68b4b7961a68e0acfb299c2dcefde351903b8444
+Date:   Sun Jul 26 12:11:13 2015 +0200
+
+    Documentation on commissions
+
+commit fd6d45ef17101a4d7cbd9d7aa9f7f2b6a625504b
+Date:   Sat Jul 25 12:02:57 2015 +0200
+
+    Update name of sphinxcontrib.images to sphinxcontrib-images for installation over docs/requirements.txt
+
+commit fc02e4e251f73e7a5e04e68e718993c71a00ff20
+Date:   Sat Jul 25 11:59:01 2015 +0200
+
+    Documentation additions/corrections and sphinxcontrib.images added
+
+commit 41e1e5864f388b8469fe8d2519af9153d2298ad5
+Date:   Fri Jul 24 12:27:00 2015 +0200
+
+    Further corrections for more "unpickable" cases
+
+commit 0411b4bc2cee6113261913dd785da342e4d02157
+Date:   Thu Jul 23 19:08:11 2015 +0200
+
+    Release 1.0.9.88 (Multicore optimization)
+
+commit 3bb9e2b528c4fbf658aa37017736f2cfebce84cd
+Date:   Thu Jul 23 19:05:49 2015 +0200
+
+    Changes to testcommon and test_strategy_optimized to avoid nosetests errors with multiprocessing
+
+commit e52bc0a8b86a399f2071f5da7334b72cede321df
+Date:   Thu Jul 23 19:04:46 2015 +0200
+
+    Multicore support for optimization
+
+commit e43da64708f34fb3bff71a0a4eb952dcfab521ff
+Date:   Thu Jul 23 19:02:20 2015 +0200
+
+    Changes needed to support pickling: adding dynamic classes to modules, assigning unique names to dynamic classes, not keeping instance methods in variables and removing lambda definitions for functions defined at module level
+
+commit ad27e93b2bc400124040c4bdaf197b1f05a5d53b
+Date:   Wed Jul 22 21:18:54 2015 +0200
+
+    Documentation updated to correct "reversed" parameter to "reverse" in Yahoo file loading
+
+commit e6c4959acb82416c8f9b5c64eebd0daa642e951b
+Date:   Sat Jul 18 21:37:12 2015 +0200
+
+    Added blog link to README.rst
+
+commit 79aa3c17e97d715002d7a00655783891e1cab167
+Merge: ff31d4d f556f9c
+Date:   Fri Jul 17 14:31:03 2015 +0200
+
+    Merge branch 'master' of https://github.com/mementum/backtrader
+
+commit ff31d4d0d3d44615d114445f4ef4bb4eb646f775
+Date:   Fri Jul 17 14:30:26 2015 +0200
+
+    Release 1.0.8.88
+
+commit 31600a14614234d9383d84839479e6e0f54c8b80
+Date:   Fri Jul 17 14:27:39 2015 +0200
+
+    Indicators (87): Trix (w doc/test)
+
+commit 53746203893eb8cef8e92b5f5ac10828134ccf2d
+Date:   Fri Jul 17 14:26:59 2015 +0200
+
+    Moving Average Refactoring into separated files
+
+commit f556f9c8c8ef218281f10b5f2bb23b000b03567b
+Merge: 104ec42 9afed8f
+Date:   Fri Jul 17 11:38:06 2015 +0200
+
+    Merge pull request #1 from nicoddemus/patch-1
+    
+    Fixed RST formatting
+
+commit 9afed8f72585341334744a08bf7cd8c294ed31bb
+Date:   Thu Jul 16 20:47:10 2015 -0300
+
+    Fixed RST formatting
+
+commit 104ec42e50656f5025746b07ca9c85ea87d4af71
+Date:   Thu Jul 16 22:29:06 2015 +0200
+
+    Improved crosshairs Multicursor (submitted to matplotlib)
+
+commit 47dbef92027ed95bb7996f6f65bf3b3ca9c38f5b
+Date:   Mon Jul 13 22:01:44 2015 +0200
+
+    Added a crosshairs cursor to the charts using modified MultiCursor from matplotlib
+
+commit 6af555da05934186dad42774dd2f010246724ec6
+Date:   Mon Jul 13 22:00:40 2015 +0200
+
+    Corrections to FeedBase to avoid passing "dataname" twice
+
+commit ea057e837868bf2b529fdf5b55d2784b660e971c
+Date:   Sun Jul 12 09:10:02 2015 +0200
+
+    Remove leftover indicator export from test
+
+commit fddf23f2346b5030b2df1d63f02e9a175ef168ef
+Date:   Sun Jul 12 09:08:47 2015 +0200
+
+    Corner minimum period calculation case covered in ExponentialSmoothingDynamic in which a passed line as a parameter is not being considered in any calculation because there is no line assignment in the indicator
+
+commit 90fdf00ccb4aba6ef688bdd3c1d9c2f77faa2120
+Date:   Sun Jul 12 09:07:35 2015 +0200
+
+    Cosmetic corrections to moving averages to not use aliased names
+
+commit e404b79084fe8b0782644b16e51e927f7e8c14ef
+Date:   Sun Jul 12 09:06:49 2015 +0200
+
+    zlema now calles super on init
+
+commit 40ef66233fc29f0e67c08e2cfa9cd62a605257f8
+Date:   Sun Jul 12 09:06:31 2015 +0200
+
+    Notation relaxation: indicators may not indicate on which data they operate and the data of the owner will be used automatically
+
+commit b83bd7d7310f1865958345801918ea8f5ba3be37
+Date:   Sun Jul 12 09:05:28 2015 +0200
+
+    Added incminperiod to increase minperiods with non further calculations
+
+commit dff9eb1aaad40c406b1b6c0fa9f37620f57ef710
+Date:   Sun Jul 12 09:05:03 2015 +0200
+
+    alias plotname assignment done before the alias variable is overwritten to avoid plotname from just being the 2nd letter of the alias
+
+commit 73ed6dd751a6e6b1f5de70b1d8423366afb48afe
+Date:   Sun Jul 12 09:03:47 2015 +0200
+
+    Correction to yahoodownload from landscape.io check when exception is raised
+
+commit 6bd9dbfcdaa8a914e032cb802b455b9a0d3a967b
+Date:   Wed Jul 8 21:04:28 2015 +0200
+
+    Corrections following landscape.io analysis
+
+commit 384739cdcf94990675d9a6d9ecd22bb8b7476190
+Date:   Wed Jul 8 14:16:17 2015 +0200
+
+    Moved test needed requirements from requirements.txt to .travis.yml and removed requirements.txt
+
+commit 3d759ef194086780f2a285c74e1d3c8a70814d67
+Date:   Sun Jul 5 02:13:39 2015 +0200
+
+    Release 1.0.7.86
+
+commit 164402c001d30ded17b35c61d03f2089b7277645
+Date:   Sun Jul 5 02:09:54 2015 +0200
+
+    Indicators (86) - Williams Accumulation/Distribution (WilliamsAD) added
+
+commit 148984849d077ccac6135e9935a1b3efaeb530fc
+Date:   Sun Jul 5 02:09:03 2015 +0200
+
+    ZLEMA test added and refactored into own file
+
+commit 5ed2eaeab0e94f4c59196454465e8da39e309c67
+Date:   Sun Jul 5 02:08:40 2015 +0200
+
+    Indicators (85): PriceOscillator, PercentagePriceOscillator, PercentagePriceOscillatorShort, PrettyGoodOscillator added
+
+commit c4b6ef09a64b5af5006e180e32dfe3a9de236686
+Date:   Sun Jul 5 02:06:59 2015 +0200
+
+    Accum alias renamed
+
+commit d872d408b8b11f1c328275bcc53e756faf4736ed
+Date:   Sun Jul 5 02:00:27 2015 +0200
+
+    Docstrings updates and some refactoring
+
+commit 1d296c03c9b2fd415e434066f1b0e51728f0095a
+Date:   Sun Jul 5 01:58:05 2015 +0200
+
+    Indicators receiving only 1 data get the 2nd and later lines as extras (use case: a crossover uses line 0 and 1 automatically)
+
+commit c78e5f805823ef72c2147e7d68a8a97ae06d8468
+Date:   Sun Jul 5 01:56:14 2015 +0200
+
+    Autodocumenting params apply the class name if the passed parameter is an indicator
+
+commit 171fc04324b107e36d78ecf8826be9b134a56865
+Date:   Thu Jul 2 23:46:36 2015 +0200
+
+    Avoid automatically generated Envelope/Oscillator from MovingAverages to register to avoid "EnvelopeOscillator" subclasses
+
+commit 42e7bd5706dc5ad89ad6b410923fe2abddf120fa
+Date:   Thu Jul 2 23:28:19 2015 +0200
+
+    indicators autoregister with Indicator (for things like autodocumentation)
+
+commit bb293ce9aa8601f69e9f8918cafadd559908ddb3
+Date:   Thu Jul 2 23:26:36 2015 +0200
+
+    Removed previous indicator documentation and added "indautoref" own directive for autodocumentation
+
+commit 1429bd90bf353b0323b38f52acef35a9b9ba4cc0
+Date:   Thu Jul 2 23:23:42 2015 +0200
+
+    Added sphinx etension to automate documentation of indicators
+
+commit 6afd415efd46c1682738ef771616ee5c5673e984
+Date:   Thu Jul 2 23:23:02 2015 +0200
+
+    Removed docstring code from LineSeries to move it to a sphinx extension
+
+commit e0a45feb5cb7cdca13e492b4245e8450a1c70486
+Date:   Wed Jul 1 00:59:40 2015 +0200
+
+    deviation label corrected in docs
+
+commit 78d1b1184eea8f942f0d2842da31039852ca8f2f
+Date:   Wed Jul 1 00:56:38 2015 +0200
+
+    Refactored all indicators to do a relative "." import for Indicator and functions
+
+commit 1e9c358c6d84544d69750e3490f7e9738a50cd91
+Date:   Wed Jul 1 00:50:42 2015 +0200
+
+    Indicators (81): UpDayBool, DownDayBool as specialized versions of UpDay and DownDay
+
+commit 6ed4c5a42422ad5e3687de1bb6c6fcd03bebb386
+Date:   Wed Jul 1 00:47:08 2015 +0200
+
+    Indicators(79): TrueLow, TrueHigh added and TrueRange refactored to use them
+
+commit 205c17564b5270ad0b6c08553628d40d38d56a3b
+Date:   Wed Jul 1 00:38:10 2015 +0200
+
+    Refactored oscillator to automatically create envelopes from all auto-registered MovingAverages
+
+commit 624cab07863010aace3c10723f3ab83cc0bc5dcd
+Date:   Wed Jul 1 00:37:33 2015 +0200
+
+    Refactored envelope to automatically create envelopes from all auto-registered MovingAverages
+
+commit d7b48f164ea73a9dd6026e1aa67520a3316b7df5
+Date:   Wed Jul 1 00:32:39 2015 +0200
+
+    Refactored DEMA, TEMA, ZLEMA to subclasses of MovingAverageBase for autoregistrattion
+
+commit 0940ecc2f8a12af09b6a82f200a977777a158c5e
+Date:   Wed Jul 1 00:31:45 2015 +0200
+
+    Refactored MovingAverage placeholder and MovingAverages to use basic operations and autoregister in the placeholder
+
+commit 89c91617914585aa966bd7244c0528e382e4c6c7
+Date:   Wed Jul 1 00:28:54 2015 +0200
+
+    Indicators (74): basicops receives Average, WeightedAverage, ExpSmoothing, ExpSmoothingDynamic
+
+commit 98b9c011a1db7c0669ca43baa05856911a4906c9
+Date:   Wed Jul 1 00:23:20 2015 +0200
+
+    Improvements to class alias definition
+
+commit 855d9de9b25bd0d638f352146185d680fcaba2b7
+Date:   Wed Jul 1 00:22:08 2015 +0200
+
+    Import Indicator and functions into the indicators package to enable indicators to do a "from ." import
+
+commit b805e522f1fd4fb3ad9b1db2487c012785a83a9c
+Date:   Sat Jun 27 01:27:20 2015 +0200
+
+    Release 1.0.6.70
+
+commit 12ec2e7a8810ef901df3fedf1eb57f3a1373a134
+Date:   Sat Jun 27 01:26:31 2015 +0200
+
+    Restored missing closing ) in License classifier in setup.py lost during PEP8 refactoring
+
+commit ef9ee3ad1604c0b4b543457c938909d06d4cf029
+Date:   Sat Jun 27 01:20:55 2015 +0200
+
+    Test case for envelope
+
+commit 9b875b8f069ec4590e65afd8b4979b8ac2e1b1e5
+Date:   Sat Jun 27 01:20:44 2015 +0200
+
+    Oscillators and MovingAverage family oscillators added
+
+commit d93354b780acf45c366d831264cdfad853f3f440
+Date:   Sat Jun 27 01:19:02 2015 +0200
+
+    Bug in plot corrected which would prevent indicators on indicators from being plotted
+
+commit 245876db41731042b39d727a4ed5bc2ba73a2e7c
+Date:   Sat Jun 27 01:18:20 2015 +0200
+
+    EnvelopeMixIn documented
+
+commit 06b1596d2fb37c089f451d6dcb38e65d5ac2fc0c
+Date:   Sat Jun 27 01:16:00 2015 +0200
+
+    Envelope corrections and EnvelopeMixIn slight refactoring in line usage
+
+commit 7972d455023bdf81c4be3641da039e130f9f1611
+Date:   Thu Jun 25 23:58:19 2015 +0200
+
+    Plot support in plotlines for numbered lines in addition to named lines
+
+commit a8b784f71c52099e2dd5775e83fad3b00b3a9324
+Date:   Thu Jun 25 23:55:35 2015 +0200
+
+    Improvement for testcommon to support passing explicit datas to tested indicator
+
+commit 5512f64bd121a3431a4e65c8689c746f1a19217f
+Date:   Thu Jun 25 23:54:34 2015 +0200
+
+    DEMAEnvelope and TEMAEnvelope added
+
+commit 391e10fefe1755f5ac7d0d29936cb68813edb0c5
+Date:   Thu Jun 25 23:53:35 2015 +0200
+
+    Missing super to support mixins added to DEMA and TEMA
+
+commit f44a37e49f215b5aeb5d53f7068b17767ea4d22d
+Date:   Thu Jun 25 15:54:08 2015 +0200
+
+    Indicators: DEMA, TEMA (with tests and docs)
+
+commit 0df3c291635269dddbdc367aff60bccbf85dc383
+Date:   Thu Jun 25 15:37:34 2015 +0200
+
+    Refactored indicators to use alias and semi-autodocumentation facilities from LineSeries
+
+commit 2c4d7d6df0e69b3e8e0a6738d557cce8b94b872d
+Date:   Thu Jun 25 15:33:04 2015 +0200
+
+    MetaLineSeries support for alias definition and autodocumentation of alias, lines, parameters, plotinfo and plotlines
+
+commit 42b569945b40c1db8599628125183d1851d00c4e
+Date:   Thu Jun 25 15:31:55 2015 +0200
+
+    AutoInfoClass._getdefaults correction to return a list of defaults and not a list with an iterator under py3
+
+commit 2cd0228e0cb5b67cb0e2083010de03e0f29707e0
+Date:   Wed Jun 24 00:12:46 2015 +0200
+
+    Refactored and simplified envelope indicators
+
+commit 39003a4632bd089a3c7f7dc15e852310e06b853b
+Date:   Wed Jun 24 00:08:32 2015 +0200
+
+    Refactored Moving Averages to be "formulated" objects rather than next/once based to allow for easy mixin/subclassing
+
+commit 133dc46fdd116da11dff8f05feeb51dd63432006
+Date:   Wed Jun 24 00:07:25 2015 +0200
+
+    plot fetches a default AutoInfoClass for lines not being in the "plotlines" of an indicator
+
+commit 373b250e6cbb0aa34a6769b88335339e96f02bcf
+Date:   Wed Jun 24 00:06:43 2015 +0200
+
+    MetaParams objects can be mixed with other objects containing "params"
+
+commit 91c39b0b52678070b2f20d7f34d28d644019a3fe
+Date:   Wed Jun 24 00:06:09 2015 +0200
+
+    LineSeries objects "lines" can be mixed with objects holding "lines" attributes
+
+commit 6d8bbde6b5ed329fc2a41489a4af285f22d1e1f0
+Date:   Wed Jun 24 00:04:43 2015 +0200
+
+    super added to PeriodN __init__
+
+commit 291e4e071cd78eca957d721330371df362d470c2
+Date:   Sat Jun 20 00:58:21 2015 +0200
+
+    Subclass OperationN from new PeriodN to allow for subclasses of basic PeriodN with no need to define "func"
+
+commit dd57eb2ac2b4599c5d9acf105572c11e93b61f77
+Date:   Sat Jun 20 00:57:01 2015 +0200
+
+    Changed (previously unused) behavior of assignment to lines[x], allowing establishing line bindings without knowing the alias
+
+commit b30bc9ce6b61a0aa3ed71f727fe099c3819ef890
+Date:   Sat Jun 20 00:55:16 2015 +0200
+
+    Removal of testcommon leftover comments
+
+commit 12b42827533f9c1c8c276902aa3439eac68c7a99
+Date:   Sat Jun 20 00:54:02 2015 +0200
+
+    Improvements to envelope object hierarchy with method to prepare periods
+
+commit 3fc94e00c403da9f61caee72038cbed031056768
+Date:   Fri Jun 19 19:38:52 2015 +0200
+
+    Number of indicators added to README.rst
+
+commit d2ed299c9662b6279dddd4f9cdc15ea1ab3aa742
+Date:   Fri Jun 19 19:00:21 2015 +0200
+
+    Added AroonUpDown, AroonOscillator, AroonUp, AroonDown,  AroonUpDownOscillator (with tests and docs)
+
+commit 495841aa75539b3ea02475ac0aa470ca2adbc524
+Date:   Fri Jun 19 18:59:41 2015 +0200
+
+    Added basic indicators FindFirstIndex, FindFirstIndexHighest, FindFirstIndexLowest (with docs)
+    
+    Added basic indicators FindFirstIndex, FindLastIndexHighest, FindLastIndexLowest (with docs)
+
+commit ad9aef9f886b8f218c999c6d7702407cb7be0a89
+Date:   Fri Jun 19 18:58:28 2015 +0200
+
+    Leftover protection for multiple inheritance removed from DirectionalIndicator
+
+commit 6b4ec1045778976abcb178ac0807aad706be6098
+Date:   Fri Jun 19 18:58:00 2015 +0200
+
+    Existing indicators updated to use new plot/indicator code logic separation
+
+commit c9e8113a7e19d9501e9aa36b1724a5e698129762
+Date:   Fri Jun 19 18:56:18 2015 +0200
+
+    Added support in plot and lineiterator to put plot specific code (like dynamically setting plothlines) in a separate method to fully separate indicator logic from any plotting logic
+
+commit 03cb75abe04c1b17dadcda81ec8e71acc2dd1dad
+Date:   Fri Jun 19 18:55:11 2015 +0200
+
+    Changed test case generation string printing to simplify operations (Python 3.2 doesn't support 'u')
+
+commit 4aa5132a0a89a22a497dbe38f4d12356c984dc70
+Date:   Fri Jun 19 18:53:48 2015 +0200
+
+    Fully specified Python versions supported in setup.py and some PEP8 changes
+
+commit 3043dea9539e429856680ae08ea8ae19b012d881
+Date:   Fri Jun 19 18:52:35 2015 +0200
+
+    Renamed old miscops.rst to basicops.rst for consistency with code
+
+commit 2a831d6ac37e6557659249f41e82e15c788a92e6
+Date:   Thu Jun 18 08:49:44 2015 +0200
+
+    Correction of bug which prevented lines in different indicators to have the same name and different index at the same hierarchy level
+
+commit 5f647b3f6c0cd510c4713860f9d31c31b652d3be
+Date:   Wed Jun 17 22:23:51 2015 +0200
+
+    Release 1.0.5.47 (Python 3.x compatibility restored and 2.6 added)
+
+commit c27b19ed59b320a8d4ade19da4f1d5e213de4cbe
+Date:   Wed Jun 17 22:09:01 2015 +0200
+
+    Further corrections to import and use OrderedDict recipe
+
+commit cb025d121c26df9bb13faff0ffbbe71ec7138031
+Date:   Wed Jun 17 21:58:42 2015 +0200
+
+    Removed 3.1 from travis.yml and added specific ordereddict import to utils.__init__
+
+commit c0ab18fbc02b22203bca4153433c0efd5d07ef17
+Date:   Wed Jun 17 21:51:49 2015 +0200
+
+    Added Python 3.1 to travis.yml
+
+commit 41bc66a54bdb9171db6a4373c295f45828197b53
+Date:   Wed Jun 17 21:51:29 2015 +0200
+
+    Added ActiveState OrderedDict recipe for Python 2.6 and updated usage in metabase and plot
+
+commit d134bf7341276ecbfad0c8a4f242a98f60e8fde8
+Date:   Wed Jun 17 21:42:16 2015 +0200
+
+    Remove u from strings in tests for Python 3.2
+
+commit f42507980a5c3b660d6959640be9211ffd23ea39
+Date:   Wed Jun 17 21:27:16 2015 +0200
+
+    Added Python 2.6/3.2/3.3 to travis.yml to check for compatibility
+
+commit 517b109370493f1a332d9c0447c9b32bc1e547e5
+Date:   Wed Jun 17 21:19:14 2015 +0200
+
+    test_strategy_optimized import xrange from six for Python 3 and travis.yml updated to runn with Python 3.4 too
+
+commit b573d43c85b428bb953d455bebe98364b2fdde4d
+Date:   Wed Jun 17 21:17:36 2015 +0200
+
+    Changes (__hash__ in lineroot and list(xxx.values) when plotting) for Python 3.4 compatibility
+
+commit 911e13619de46de8d3fbd35628e8058d5f49639e
+Date:   Wed Jun 17 10:48:13 2015 +0200
+
+    XXXDeviations plotting labels improved
+
+commit dc2d74b8920dd26b56cbf66a84ae0d9707b55529
+Date:   Wed Jun 17 10:47:42 2015 +0200
+
+    DirectionalMovement plotting labels improved
+
+commit c310e8fe1b1b1782c7b02ac3196b830cd245cfe6
+Date:   Wed Jun 17 10:47:24 2015 +0200
+
+    Momentum plotting labels improved
+
+commit 264a2a70de9045b40f2b3f359ee57c7b89d92411
+Date:   Wed Jun 17 10:46:51 2015 +0200
+
+    Stochastic plotlines names improved
+
+commit cb6024883a12ff044b81d4049e78ebe033305604
+Date:   Wed Jun 17 10:46:20 2015 +0200
+
+    WilliamsR plotname/plotlines names improved
+
+commit aaafa68edeb7f37a541626afa83036b9a73cf2cb
+Date:   Wed Jun 17 10:45:50 2015 +0200
+
+    CCI Plotting labels improved
+
+commit 9998534846f71cfa6624809dd68c9c012b85c460
+Date:   Tue Jun 16 11:51:30 2015 +0200
+
+    Release 1.0.4.47
+
+commit 2c3230a6be74d8dab4d74d98ba82b6c1d58cb1c5
+Date:   Tue Jun 16 11:46:31 2015 +0200
+
+    DirectionalMove Indicators (+tests/docs): DI, +DI, -DI, ADX, ADXR, DMI, DM
+
+commit 0ef86a82c75c49474b0c034559ff85b926ec0925
+Date:   Tue Jun 16 11:44:39 2015 +0200
+
+    Refactoring of UpDays/DownDays to UpDay/DownDay for RSI
+
+commit f72570bdf488bb81c273f1aa19e06c79e51c7eb3
+Date:   Tue Jun 16 11:43:18 2015 +0200
+
+    Update docs badge link to project, add direct link to indicators in docs and clarify installation from sources with header
+
+commit 81689857c937c46a8acb9e3d930ee9673d64a18a
+Date:   Tue Jun 16 10:39:16 2015 +0200
+
+    Plot support for lines having a name different than the class alias (ex: plusDI can be plotted as +DI)
+
+commit 480811c0e6bfcf092bcda9bdff780c950c77a3b9
+Date:   Mon Jun 15 23:16:49 2015 +0200
+
+    cci imported in indicators
+
+commit 1ecfd823e5ac45da8ec4ed69ca73f5b1c7f346e8
+Date:   Mon Jun 15 23:16:30 2015 +0200
+
+    Documentation updates for indicators XXXXDeviation, CCI and general indicator reordering
+
+commit 6f27a23c151be5d3f2fe43dde1587e0b5648605f
+Date:   Mon Jun 15 23:15:41 2015 +0200
+
+    Indicator cci changes, documentation and test
+
+commit 1a2b2a3fac5743e44f81b86638f6448247acf9ec
+Date:   Mon Jun 15 23:14:47 2015 +0200
+
+    Cosmetic title underlining corrections for XXXEnvelope
+
+commit c72d2f592169d0c23823193c2638d8acd29d70ee
+Date:   Mon Jun 15 23:14:19 2015 +0200
+
+    Remove test_strategy_unoptimized leftovers
+
+commit bc5bb02ddef81331beb104959db4d8c6dd1d0dcb
+Date:   Mon Jun 15 22:34:27 2015 +0200
+
+    All indicators changed to used absolute imports for clarity and possible independence
+
+commit 3799e477f09762679521b8cd86c5d6c71d04a783
+Date:   Mon Jun 15 16:17:44 2015 +0200
+
+    Test for "Position"
+
+commit dd3e84ce3599824a359d2ea33be6f6a0b2df353b
+Date:   Mon Jun 15 15:13:35 2015 +0200
+
+    Operation removed dangling isclosed reference to __len__
+
+commit f21198de811def8d3ffc17593d0aab6a400c443e
+Date:   Mon Jun 15 15:11:36 2015 +0200
+
+    Test added for "Operation"
+
+commit d5f72983667975372b355875df762ec778d49726
+Date:   Mon Jun 15 13:27:41 2015 +0200
+
+    Cosmetic change to "triggered" parameter initialization in StopLimitOrders
+
+commit e4dc6578a8543385df5637f4a50ecbf4a4a90e64
+Date:   Mon Jun 15 12:07:38 2015 +0200
+
+    Tests for strategy optimized/not optimized added
+
+commit abfb570db96ad32cb18a8aaccf59a2185f5d4516
+Date:   Sun Jun 14 22:40:25 2015 +0200
+
+    Release 1.0.3.36
+
+commit 2fcd62eeb87f8c36e7be52064cc563e813edf53d
+Date:   Sun Jun 14 22:36:11 2015 +0200
+
+    Documentation and test for CommissionInfo
+
+commit dbfe0a9302f6a15479bb3801aa034786a3aaa8b4
+Date:   Sun Jun 14 21:27:48 2015 +0200
+
+    Added indicators: Envelope, SMAEnvelope, EMAEnvelope, SMMAEnvelope, WMAEnvelope, KAMAEnvelope (tests and docs included)
+
+commit 10580645b6a9075a35e8671fc7a2d5c1239d167c
+Date:   Sun Jun 14 21:26:10 2015 +0200
+
+    Corrected label plotting when a LineSeries object is passed as label
+
+commit 0fafe8ddc01d60e1d4d2dea6c7e4f3650299860c
+Date:   Sat Jun 13 11:38:15 2015 +0200
+
+    Broker correction of initial commission assigment. Introduced error when adding support for optimization
+
+commit 95b2e4289c38a68c1fd139e02e0040483c909081
+Date:   Sat Jun 13 11:37:29 2015 +0200
+
+    BuySell observer plotting style changed to full and buy color changed to lime for visibility
+
+commit 35bde446f74e55ff152064492b5f0d9f6e57ddce
+Date:   Sat Jun 13 11:37:01 2015 +0200
+
+    Operations observer plotting style changed to "full"
+
+commit deb3d379a58176fda684f9807b5013d0df86ff80
+Date:   Sat Jun 13 11:36:35 2015 +0200
+
+    Correct broker usage in "close" operation
+
+commit 27b6b2e0232fee0fbe162b13327ba06c75f65dc4
+Date:   Fri Jun 12 12:04:47 2015 +0200
+
+    Indicators documentation update for StochasticFull, CrossOver, CrossUp, CrossDown
+
+commit 93a66d5a918de0efb08b46b0dd42a7c7438e8381
+Date:   Fri Jun 12 12:04:13 2015 +0200
+
+    CrossOver, CrossUp, CrossDown indicators and documentation
+
+commit c5faf4ee8b2a77b9a434f3a48b14bfca5e749c9a
+Date:   Fri Jun 12 11:30:08 2015 +0200
+
+    Stochastic lines renamed to percK and percD from kperc and dperc for accuracy
+
+commit 0c43386a6ed3542b460757bb3d5fc1a4bc160057
+Date:   Fri Jun 12 11:28:23 2015 +0200
+
+    Williams renamed to WilliamsR for accuracy and line renamed to percR
+
+commit d18622540e3e43f59c8ec500697e8da1ab0caf04
+Date:   Thu Jun 11 13:35:52 2015 +0200
+
+    Removal of specific plotnames in MovingAverages
+
+commit b22c3f6153daae6e2febf1e2177ecdebfb42adc7
+Date:   Thu Jun 11 13:33:48 2015 +0200
+
+    Wikipedia link for DPO
+
+commit 892cb36e3cfecfa5eb86a084c772d7dcd3db03e6
+Date:   Wed Jun 10 23:49:14 2015 +0200
+
+    Release 1.0.2.26
+
+commit a9d4581587205e67f3d277603c700c46b2150f60
+Date:   Wed Jun 10 23:48:03 2015 +0200
+
+    Correction to yticks logic (errot introduced on logic changed from "is None" to "not")
+
+commit 2227f5fe8605983f996f866fc88cd7350f026017
+Date:   Wed Jun 10 23:47:14 2015 +0200
+
+    Documentation update for new indicators (Williams, ROC, Momentum, MomentumOscillator)
+
+commit 63f9e408480a2fab4a28484fd00b31d5c0603c77
+Date:   Wed Jun 10 23:46:48 2015 +0200
+
+    Import of new indicators (Williams, Momentum, ROC, MomentumOscillator)
+
+commit ce475e299fe39d2317c5f062746c290eba1d2233
+Date:   Wed Jun 10 23:46:15 2015 +0200
+
+    Momentum, RateOfChange, MomentumOscillator and tests
+
+commit 7c391e4cd05f3e0123b6335e599b40aa14dbd1f4
+Date:   Wed Jun 10 23:45:40 2015 +0200
+
+    Williams %R indicator and test
+
+commit 588acfab640a99e82a57b943b5d5022d0f1955ef
+Date:   Wed Jun 10 23:43:20 2015 +0200
+
+    KAMA sets plotname to override inherited one from SimpleMovingAverage
+
+commit 7354558876c791b6c7cedb3f42aed64c10b1bd8b
+Date:   Wed Jun 10 15:03:44 2015 +0200
+
+    Add badges' alternative test and add a badge for the documentation
+
+commit 943f9db5cbcaa3ffb3d507fa01520dfb9ae26768
+Date:   Wed Jun 10 15:02:30 2015 +0200
+
+    Plotting support for indicator on indicator respecting above/below order
+    
+    Support plotting indicators which don't have a data/indicator clock by looking up the chain
+
+commit 799182ef6616d645c16f958c65284ea22b9a6970
+Date:   Wed Jun 10 14:51:23 2015 +0200
+
+    Extra plotting defaults to lineiterator to simplify plotting code
+    
+    Added plotforce to force plotting of an indicator which relies on non-plotted/plottable data/clock sources
+
+commit c95f654b9717f1a2b72cf5bca7b5407b9f815d35
+Date:   Wed Jun 10 14:49:16 2015 +0200
+
+    Correction to minperiod calculation to correctly calculate and take into account indicator on indicator/single lines minperiods together with multi-timeframe datas
+
+commit 2d1cd0d56b3712ee817deb3580b6cf579f0f89b0
+Date:   Tue Jun 9 00:00:28 2015 +0200
+
+    Release 1.0.1.22
+
+commit e8955b40da7326bf649bdb05ff10a6f15ca0b5a6
+Date:   Mon Jun 8 23:44:35 2015 +0200
+
+    Testcase added for data replay
+    
+    Reordering or test cases base imports for main module import
+
+commit 00e3b4b7df71686dc8e883097c02cb16415fe196
+Date:   Mon Jun 8 22:27:45 2015 +0200
+
+    Kama removal of extra period addition after extra period check added to LineIterator
+
+commit 34581f60cd720c835c0e7fd34f1aae58a773eec6
+Date:   Mon Jun 8 22:26:49 2015 +0200
+
+    Extra minperiod check in LineIterator postinit hook to account for indicators with calculations in __init__ not applied directly to line assignments
+
+commit 7e1086a3f7e929b165e60fdd780c0875b463efae
+Date:   Mon Jun 8 00:14:28 2015 +0200
+
+    New travis-ci badge link
+
+commit fd6a65f5e754ac6403cf47bc888b98bbfcc657eb
+Date:   Mon Jun 8 00:13:05 2015 +0200
+
+    nose-exclude test
+
+commit d872b5bb2194eb2843b53acbddd769d28750affb
+Date:   Mon Jun 8 00:11:43 2015 +0200
+
+    New "ignore" regular expression
+
+commit e3a52bc4a8b69a0e9cd7317435f38cc38c10b95f
+Date:   Mon Jun 8 00:09:45 2015 +0200
+
+    nose-exclude version spec corrected
+
+commit c4777c9516f1d73b45f299fd49522ae1ecee388c
+Date:   Mon Jun 8 00:06:06 2015 +0200
+
+    Changed .travis.yml to add  a "ignore" regular expression
+
+commit 21fc45895eb76906260f7725bb2fb1590e33d33b
+Date:   Sun Jun 7 23:59:01 2015 +0200
+
+    New commit testing travis-ci building
+
+commit c83dbf62fa970722a07c70ccd7fd7b1fd2569dcf
+Date:   Sun Jun 7 23:47:08 2015 +0200
+
+    Added __test__ = False to plot/__init__.py to avoid nosetests collection
+
+commit c403ade5ba22f8380823b5d53508b4c258ebf257
+Date:   Sun Jun 7 23:30:23 2015 +0200
+
+    Added verbosity to nosetests for travis
+
+commit 1cf2b0e7f67957fa4a8aea92d80f8add14734f25
+Date:   Sun Jun 7 23:20:43 2015 +0200
+
+    travis-ci batch
+
+commit e8d8c948a31f6009b481e695ac295638ec53371e
+Date:   Sun Jun 7 23:05:12 2015 +0200
+
+    added travis.yml file
+
+commit 9fef5e3c0239f126a335a53a82c003f3f7043fa8
+Date:   Sun Jun 7 23:04:58 2015 +0200
+
+    pip requirements.txt file added
+
+commit 5b981bbfafa0723f7fe566400e7b5c0d82f413ca
+Date:   Sun Jun 7 22:44:46 2015 +0200
+
+    Minperiod correction to not yet released AdaptiveMovingAverage
+    
+    Indicate which is the seed value for AdaptiveMovingAverage
+    Rename alias for AdaptiveMovingAverage from AMA to KAMA (Kaufman's AMA)
+
+commit 2a6ac9f51db0b830b49d84e32ded38bb798b7809
+Date:   Sun Jun 7 22:43:09 2015 +0200
+
+    Addition of nosetest testcases covering indicators, data multi timeframe and resampling
+
+commit d3b493464a9e55806a0d2b3132ab3ea985038719
+Date:   Sun Jun 7 22:41:46 2015 +0200
+
+    Removal of some old overall test scripts
+
+commit e21e93af0f5b3d098fefc71dc6675606195dfe6e
+Date:   Sun Jun 7 16:14:24 2015 +0200
+
+    More reordering of sample datas
+
+commit d907160671b22dc6e5e0e865eb64f124180859ce
+Date:   Fri Jun 5 23:23:48 2015 +0200
+
+    Close datafile in yahoodownload if html has been downloaded
+
+commit 94dbed103c3ecb61df1290f397dc0fb94cdb4c79
+Date:   Fri Jun 5 23:22:58 2015 +0200
+
+    Reordering/Addition of data samples
+
+commit c518a34fe3c92c608b29c81c301af65da0c573c7
+Date:   Fri Jun 5 23:22:15 2015 +0200
+
+    Added own simple csv format for sample
+
+commit 53b71cf5750946e694e4ad83d8f2b0bed6558ffd
+Date:   Fri Jun 5 23:21:37 2015 +0200
+
+    Improvements in VChartCSVData for name and timeframe recognition
+
+commit 10511e7517ca66f950a10edf3bddc531cc734981
+Date:   Fri Jun 5 00:05:34 2015 +0200
+
+    Yahoo download tool help text specifies which timeframes can be downloaded
+
+commit 08fa89bb89d8a9991eedd465eae9e587894d9af3
+Date:   Fri Jun 5 00:03:36 2015 +0200
+
+    Multi-Timeframe datas which are exhausted will return empty bars
+
+commit 1b39ee2f874f5d52bde2d70f06e89c4b88cfa237
+Date:   Thu Jun 4 10:40:04 2015 +0200
+
+    AdaptiveMovingAverage added to the docs
+
+commit 163adf9bc6ff8d89052fc3cc01564ee0daa62c00
+Date:   Thu Jun 4 10:38:53 2015 +0200
+
+    YahooCSV "reversed" parameter changed to reverse (and inverted default to False)
+    
+    Changes to make online downloadub Py3 compatible
+
+commit 79d4e79bf12c0d62753072324e72a92eaff32ccc
+Date:   Thu Jun 4 10:37:41 2015 +0200
+
+    Addition of samples limited to 2014
+
+commit f157b7d442714eb04a5772c5e02b409d9fd43786
+Date:   Thu Jun 4 10:36:19 2015 +0200
+
+    data_0 references changed to more generic data
+    
+    added AdaptiveMovingAverage
+
+commit 186e84264e1669eb4d1604d9b0a41a5b6b781624
+Date:   Thu Jun 4 10:33:50 2015 +0200
+
+    Changed LineSeries "array" access to property
+
+commit dca6d9f9d00f986398cc8f03c9c92f4daa1e3c2f
+Date:   Thu Jun 4 10:32:58 2015 +0200
+
+    - TrueRange formula improvement
+
+commit fe5cb13bff16a233ab41408bae90a84ab5d6f943
+Date:   Thu Jun 4 10:32:07 2015 +0200
+
+    extesion renaming in pending data sample
+
+commit 8e5770065c6b7f326d6b8b03ca7aa92d1d338b5f
+Date:   Wed Jun 3 23:58:05 2015 +0200
+
+    - Independent Yahoo Online Download Tool
+
+commit f57ad78b9ffef9ff273422a3a3d6dc9160b411d1
+Date:   Wed Jun 3 23:56:51 2015 +0200
+
+    - Reordering and addition of sample datas
+
+commit 70313c7ff45bd86eacd4b58bf8050ad66e14b7fc
+Date:   Wed Jun 3 00:44:12 2015 +0200
+
+    Added badges (from shields.io)
+
+commit 6712c493e6b3b0aec93b9c608c40d4ea7bf3ba2f
+Date:   Wed Jun 3 00:04:57 2015 +0200
+
+    Release 1.0.0.21 with working ReadTheDocs documentation
+
+commit c5d640bda0c9c262f4d4b09bff59c0f1360d5bee
+Date:   Wed Jun 3 00:01:58 2015 +0200
+
+    Removed dangling matplotlib import which breaks documentation building
+
+commit 71afb14ae4d9071ff3a045b99904b206ecd34ad9
+Date:   Tue Jun 2 23:54:02 2015 +0200
+
+    Added dateintern and import to date  to support documentation building without matplotlib in readthedocs
+
+commit 2056255306451d04489d020f5434d9ccd0900f5a
+Date:   Tue Jun 2 23:40:58 2015 +0200
+
+    Release 1.0.0.21
+
+commit d75f1b3434c6c5b5ece69f8aede8fa128e477610
+Date:   Tue Jun 2 23:40:34 2015 +0200
+
+    rsi sphinx updates
+
+commit 01da87ccf3e68cc4066680b5324049428a64ef12
+Date:   Tue Jun 2 23:40:07 2015 +0200
+
+    small mini-correction to rsi_ema documentation
+
+commit 41687d254cc35ba478cd3ca2e0b986101946934a
+Date:   Tue Jun 2 23:39:40 2015 +0200
+
+    Added __version__ to main __init__ and setup.py and conf.py read this version number
+
+commit b214d964fc3b65ec10eb3f4c02c69025151ce3d5
+Date:   Tue Jun 2 23:39:08 2015 +0200
+
+    renamed ind to indref inside the docs
+
+commit 12ff7d72fa93c26247be86fba3670e575ee53f62
+Date:   Tue Jun 2 21:54:20 2015 +0200
+
+    Added documentation for moving averages, macd, rsi, stochastic and miscellaneous operations
+
+commit 48e20878247e34cabb19d0b8f41c35df23091a1b
+Date:   Tue Jun 2 21:53:44 2015 +0200
+
+    Updates to documentation
+
+commit cced60143b38b173ec31755e56eb473a4959a901
+Date:   Tue Jun 2 21:53:14 2015 +0200
+
+    Documentation updates in indicators' docstrings
+
+commit cb097f127d98225fa430ba323f93b92c474b7756
+Date:   Tue Jun 2 21:52:30 2015 +0200
+
+    - Stochastic - renamed lines from k, d to kperc, dperc
+    
+    - Stochastic - Updated documentation
+
+commit 6815c114cec4d6540022455e4550d10bcb2dad83
+Date:   Mon Jun 1 22:53:16 2015 +0200
+
+    Large sphinx documentation rework
+
+commit 71ebdf130459d63ac5f491aa405b4d0422228902
+Date:   Mon Jun 1 22:52:23 2015 +0200
+
+    bollingerbands documented
+
+commit 1d2ca1f39a4bdde01511563add33903f0ceae529
+Date:   Mon Jun 1 22:52:02 2015 +0200
+
+    Light changes to atr and dpo docstrings
+
+commit ed6ef728fe8e4d50ac1a4a66fe568ad544ac82c6
+Date:   Mon Jun 1 22:32:47 2015 +0200
+
+    Added MovingAverage alias for MovAv (class holding enumeration of Moving Averages)
+
+commit f2def0aab5e5f4e0c4b92a24cefa65610320d9d1
+Date:   Mon Jun 1 22:31:32 2015 +0200
+
+    Documented DetrendedPriceOscillator
+
+commit df31b883871f2aa643f967eaecd3ef88adf5d0fa
+Date:   Mon Jun 1 22:31:09 2015 +0200
+
+    Documented AverageTrueRange and TrueRange
+
+commit 8bc8455df4b30e0e600af9e347d7b2c476206f85
+Date:   Mon Jun 1 22:30:26 2015 +0200
+
+    Added line_name alias for all lines objects
+
+commit 40334a650377476cf17aa372eaa9e1084cacee6d
+Date:   Mon Jun 1 22:29:39 2015 +0200
+
+    sphinx theme changed to read the docs
+
+commit 30db78b20721afe60c774112a286ce404e9cf71f
+Date:   Mon Jun 1 22:27:48 2015 +0200
+
+    function Sum changed to use math.fsum rather than sum
+
+commit 540a6fbd0837639ee0dbf14efc2d3f5c258688da
+Date:   Tue May 26 11:24:56 2015 +0200
+
+    indicators now contribute to the minimum period calculation with regards to the timeframe of the data which they have as clock in order to decide when a strategy's next operation is first called
+
+commit c8c05f60397630097ac54de6daf170bd783d25be
+Date:   Sun May 24 21:10:50 2015 +0200
+
+    plot correction to avoid volume plotting if the data contains no volume (always 0)
+
+commit efc3356bb247957ebe82957ff33453cc6960baff
+Date:   Sun May 24 12:11:01 2015 +0200
+
+    Refactored DataResampler to enable reuse in Replay
+    
+    Implemented Replay
+
+commit abdbcd096a509b8b436a0e9b13d7f220e9725ec7
+Date:   Sun May 24 12:09:39 2015 +0200
+
+    Moving Average Smoothing optimization removal which would break "replay"
+
+commit 0ff4fe2a3b3154a48337a5eb919db461d945a808
+Date:   Sat May 23 22:13:48 2015 +0200
+
+    resampling implementation
+
+commit 4c8874e8a13c374bfcce9bfdae3b79916268757f
+Date:   Sat May 23 22:12:42 2015 +0200
+
+    feed.DataBase refactoring to enable resampling
+
+commit 7252ec1e34a40126823693d4f6d26e4d8d633293
+Date:   Sun May 17 21:42:38 2015 +0200
+
+    support for multi timeframe datas in runonce mode
+
+commit 7d90dc5ebcbd656cf09d1c798333f6d63934e8a0
+Date:   Sun May 17 00:37:38 2015 +0200
+
+    plotting support for multiple timeframes on same strategy
+
+commit 509091e5e251c70acbc5a9a2369b97ea619e6919
+Date:   Sun May 17 00:37:10 2015 +0200
+
+    Support for multiple timeframes on same strategy/cerebro
+
+commit 0c45abed55800d3ecc31a2ba06015ebfd69112c5
+Date:   Sun May 17 00:31:27 2015 +0200
+
+    add plotrange which returns a range as opposed to start + size with plot
+
+commit 8b61d28c6ead002e546a073e995ef2848df56816
+Date:   Fri May 15 21:27:48 2015 +0200
+
+    replace rewind with backwards in feed
+
+commit 23db483e470011aab1c32c863f9de79411b0078b
+Date:   Fri May 15 21:26:48 2015 +0200
+
+    backwards replaces rewind in linebuffer
+    
+    rewind is now the opposite of advance (backwards that of forward)
+    added proxy call to lineseries
+
+commit 5ce8ee16fe34eb5abad8a1a7a35cd984297ce435
+Date:   Fri May 15 21:25:25 2015 +0200
+
+    Correct todate parameter in tests
+
+commit 0786d6c3dd951bac4c3967199c0ffb5c8e9e35cf
+Date:   Thu May 14 23:07:36 2015 +0200
+
+    Adapted indicators to new miscops naming and new functions module
+
+commit 761ba273348886ae0de21d6f4dfb074a5aaca2cb
+Date:   Thu May 14 23:06:58 2015 +0200
+
+    linebuffer cleanup after logic functions are in the functions modules
+
+commit 8f42aca3290949746640a2674f2aa4a61eaacdc5
+Date:   Thu May 14 23:06:06 2015 +0200
+
+    renamed lineoperations to miscops and removed old ExecOnces, LineBinder, Max, High, Min, Low, Sum which are now in the functions module
+
+commit 2b5d7f3549e4b422ad3a7d171969fe830e611986
+Date:   Thu May 14 23:04:03 2015 +0200
+
+    Added functions module with If, And, Or, Max, Min, Sum and Cmp
+
+commit 587a36c46f4fb4c6404ad5c58e0cfc43197e39d8
+Date:   Thu May 14 00:28:26 2015 +0200
+
+    test.py custom indicator OverUnderMA
+
+commit 7dbad38f9bbcf4abf9decee397bfa7361ed6c573
+Date:   Thu May 14 00:27:42 2015 +0200
+
+    test3 parametrized runconce
+
+commit cfad41ef4d092b78ee66b2124a2fa598daab011a
+Date:   Thu May 14 00:27:09 2015 +0200
+
+    test3 parametrized runonce
+
+commit 8512124b998bfda5935350c37fd4ec02c14589bb
+Date:   Thu May 14 00:10:32 2015 +0200
+
+    test3 rewritten to be callable from the outside to choose between optimization and normal behaviour
+    
+    test4 rewritten to be a stub which calls test3 to optimize the strategy
+
+commit 55360711282356bc878f0a5372c1b41f84d537d9
+Date:   Thu May 14 00:09:11 2015 +0200
+
+    Removed requirements.txt for readthedocs (not needed)
+
+commit 72aef88f61088dbdb3514c4186c8ff70f22fa168
+Date:   Tue May 12 22:24:54 2015 +0200
+
+    Changes to docs to build in readthedocs
+
+commit e0c2571621770fb99ef84f5d70c4e77d92bce065
+Date:   Tue May 12 22:02:22 2015 +0200
+
+    quickstart docs update and requirements for readthedocs
+
+commit b21ef5fdcbd2879a0420300818d566115470fb7b
+Date:   Tue May 12 22:01:45 2015 +0200
+
+    broker method to initialize internally on __init__/start
+
+commit 6c62c605a4bc634ef3a728a91a2e7da7d0d354e7
+Date:   Tue May 12 21:58:01 2015 +0200
+
+    lineroot added return to stage1 on reset
+
+commit 5004e6d0d18396d8c879d433ea8168ceefb57fc1
+Date:   Tue May 12 21:57:43 2015 +0200
+
+    init added reimport of submodules
+
+commit fe5a675ba36a17d525e981b06f5c3d68f9f3b8f8
+Date:   Tue May 12 06:06:09 2015 +0200
+
+    test3 adapted to Moving Averages renaming
+
+commit f65b1436ba6967d1bf87f82d2d7f68f98aa44d50
+Date:   Tue May 12 06:05:15 2015 +0200
+
+    documentation and samples updated
+
+commit 70a701217afa49b2733383ab5b7e3f5cf17a69b8
+Date:   Mon May 11 23:22:36 2015 +0200
+
+    LineRoot removed old _comparison naming
+
+commit 38fbd3963693f81a04b0ccb3fb833d28de2cd2ec
+Date:   Mon May 11 23:18:33 2015 +0200
+
+    lineroot changes to adapt to new []
+    
+    - Adapted to new []
+    - Simplified _operaiton/_operationown with new []
+
+commit 60ee4cec07b5b2a4aa54dd5e7cdc0ef6e349a144
+Date:   Mon May 11 23:17:39 2015 +0200
+
+    LineBuffer adaption to new []
+
+commit 7196a2969be15d44a8f09ee5779e150e336576ca
+Date:   Mon May 11 22:55:40 2015 +0200
+
+    LineIterator removed returning first line if only one line
+    
+    -- This rendered object with named lines into objects with unnamed lines
+    -- Makes no longer sense with the change to operator [] for LineMultiple
+    objects
+
+commit 7bf32a30e0100bd2eff252a7bdeb89f7b7a459d8
+Date:   Mon May 11 22:54:18 2015 +0200
+
+    indicators changes to adapt to new [] behaviour
+
+commit df8b910b267d1805ae273bcb06e2f08cc3fbaa89
+Date:   Mon May 11 22:53:07 2015 +0200
+
+    LineSeries changed __getattr__ behaviour
+    
+    -- [] now returns the element corresponding to the 1st line rather than
+    the 1st line
+    -- This makes LineMultiple objects even similar to LineSingle ones
+
+commit 3f7e3e8c8ed437e9fcd28c43deeaa36154f7c114
+Date:   Sun May 10 08:16:59 2015 +0200
+
+    test and test4 brought in sync with changes
+
+commit 1124b18d9c49dab5cbcf97bf48364c0ba462e6e0
+Date:   Sun May 10 08:16:21 2015 +0200
+
+    indicators - renamed moving averages
+
+commit 6c164d48ac9205f156fa689af69fab2d9799ff38
+Date:   Sun May 10 00:30:44 2015 +0200
+
+    changed relative indices for data to negative to sync with Python -1 is "last"
+
+commit 6d47fe8c1e9852abb7992ee651aaef5b69afa1f5
+Date:   Sun May 10 00:27:40 2015 +0200
+
+    broker corrected self.p.cash leftovers
+
+commit ab8ff5a0beaf6dc0cb04ae91caa91a28b20680ed
+Date:   Sat May 9 14:06:44 2015 +0200
+
+    test3 reworked with comparison operators
+
+commit 1b503c8f14bfc2e5bf333185731c67e3e9d3a270
+Date:   Sat May 9 14:06:18 2015 +0200
+
+    lineroot implementation of __nonzero__/__bool__
+
+commit 7a8c05f34b3d0133bd7c05e868bf568fe53ce86d
+Date:   Sat May 9 14:06:00 2015 +0200
+
+    linebuffer implementation of Cmp
+
+commit 26c94131954d423754c705fb96d21082f15fcf83
+Date:   Sat May 9 14:05:33 2015 +0200
+
+    cmp definition for Py2/3 compatibility
+
+commit c5df33748ffc9f8e12c90167e11fbbf9cc58afd3
+Date:   Sat May 9 12:33:31 2015 +0200
+
+    plot - plotyhlines added as shortcut to join plothlines/plotyticks
+
+commit 84e599d3cfb3611fe62521a9b700b2297a37952d
+Date:   Sat May 9 12:09:13 2015 +0200
+
+    plot restored used of scheme rotation
+
+commit b26dcdcb203a93ce7980f7a053ed3fde5c2b9700
+Date:   Sat May 9 12:08:23 2015 +0200
+
+    linebuffer added If/And/Or Logic Line operators
+
+commit 2ef34dd6f61a55074399392549b8b51badd98765
+Date:   Tue May 5 17:00:00 2015 +0200
+
+    plot improvement in Minutes formatters
+
+commit d6c2998c2440727d955992344615b57314814939
+Date:   Tue May 5 16:59:11 2015 +0200
+
+    plot correction to passed data for setlocators
+
+commit 0f3c00b23ca44f25471721ddc5225c3b152ec36c
+Date:   Tue May 5 16:58:43 2015 +0200
+
+    indicator corrected leftovers in pseudo-next
+
+commit e5faf7ccc11662de764ff142d29ce17b27923e4c
+Date:   Sun May 3 19:16:24 2015 +0200
+
+    plot support splitting a plot across multiple figures
+
+commit d159d9ae983added8d483c25e666ea9c4b55000d
+Date:   Mon Apr 27 22:58:20 2015 +0200
+
+    plot - early attempt at improving financial date locators
+
+commit 409c68de757b3c54b11f85bd65bc4f84c2079f69
+Date:   Mon Apr 27 21:36:37 2015 +0200
+
+    plot - ymargin improvements and some cosmetic corrections
+
+commit c2c6d85f36a5d3e91cdb414f4f7f44c33fd66e06
+Date:   Sun Apr 26 23:44:36 2015 +0200
+
+    plot / zorder control implemented
+
+commit dc5ab5e8e9bdd43cf4838086958c053f11aaf965
+Date:   Sun Apr 26 22:41:00 2015 +0200
+
+    plot added yadjust to move add room to indicator yaxis
+
+commit 9d573798bc09dc3a2c057ff3c84b56010a9f9249
+Date:   Sun Apr 26 22:00:35 2015 +0200
+
+    all operators have 2 stages now
+
+commit f5f7cd47ba6e107867d8b5cf03ab08d9d89104e0
+Date:   Sun Apr 26 21:32:59 2015 +0200
+
+    renamed _setcompare to stage2 for clarity
+
+commit b8b06a0691245d076e5705b01778924ca50ca3cc
+Date:   Sun Apr 26 17:08:46 2015 +0200
+
+    test3 code in place to choose between plain run or with-optimization
+
+commit 7c514f7f11c6bc3df60b857b729409c9abc11988
+Date:   Sun Apr 26 17:07:12 2015 +0200
+
+    2 stage comparison operators implemented
+
+commit 277a3127104b47ce4c979897e041b4c664952600
+Date:   Sun Apr 26 08:54:08 2015 +0200
+
+    initial support for 2 stages comparison operators
+
+commit 21e3855e2f3cecb11ecd62b5c1356339bb5a4081
+Date:   Sun Apr 26 08:53:28 2015 +0200
+
+    lineoperations added named lines to utility indicators
+
+commit a81b7b089956437989e4a23ca6fcff9f9886edd6
+Date:   Sun Apr 26 08:53:03 2015 +0200
+
+    cerebro relocation of creation of runstrats
+
+commit dda35d54ae8c2f4bf179129a54c66467bfe55ea2
+Date:   Sat Apr 25 23:59:52 2015 +0200
+
+    test3 adapted to test optimization
+
+commit 02f7bb1b74cdfbf6e5ad362ac6a89ba0bc8c409f
+Date:   Sat Apr 25 23:57:55 2015 +0200
+
+    cerebro added optimization support
+
+commit ad2691a147acf84e0f4a77aec0f070b84ae9c172
+Date:   Sat Apr 25 23:57:26 2015 +0200
+
+    broker separated cash from params.cash to allow clean broker restart
+
+commit 1ab7c8e3b2fec0bd7b4715f2ef5da7e21fd218af
+Date:   Sat Apr 25 23:56:49 2015 +0200
+
+    analyzer keeps suboservers as variables
+
+commit 04d26cca5e3522a782846a1552cc0fe8c74b1a83
+Date:   Sat Apr 25 22:39:07 2015 +0200
+
+    broker attributes initiated during start rather than init
+
+commit f27d24c1e207b398a0a8b9b3c19f1706167f902d
+Date:   Sat Apr 25 22:38:26 2015 +0200
+
+    cerebro runstrats created only during run
+
+commit 37479a3053728f9d10f1af0e7b3736977da9dfc0
+Date:   Fri Apr 24 21:43:57 2015 +0200
+
+    plot experimenting formatters/locators
+
+commit 7b744f64625594c65113ac1e7f079544e46d4e0e
+Date:   Fri Apr 24 21:43:05 2015 +0200
+
+    plot/formatters changes for further experimenting
+
+commit 90102d3a0423e53216469a7faeccd265083114a0
+Date:   Fri Apr 24 07:20:50 2015 +0200
+
+    scheme volume and overlay defaults to true
+
+commit 81c8152e17a36bef7cf31a2246ae6a2757603e98
+Date:   Fri Apr 24 07:20:19 2015 +0200
+
+    omit default parameters in autoscale call
+
+commit 4c98cd0c929bb5655ed4d654469fdd396405e8e9
+Date:   Thu Apr 23 16:32:50 2015 +0200
+
+    plotting changes for volume, plothlines/plotyticks in indicators and multiple cosmetic pep8 changes
+
+commit 97bdb7946cf7780761ed821922cd0ec592724415
+Date:   Thu Apr 23 00:22:06 2015 +0200
+
+    Improvements/workarounds for date axis plotting
+
+commit f7594abf0e018ae9c128aa7ba87fc149ae0dde7d
+Date:   Tue Apr 21 15:53:49 2015 +0200
+
+    plot/scheme cosmetic changes
+
+commit 30227aaa63e2ae704ea91dc332c36118a76b0c08
+Date:   Tue Apr 21 15:49:37 2015 +0200
+
+    broker changes
+    
+    - cosmetic changes
+    - execution logic separated to functions
+    - "ago" logic corrected
+    - adapted to "date"/"time" changes in linebuffer
+
+commit fdba34a8cce6ca1eecb2e4409216719ed64d132a
+Date:   Tue Apr 21 15:48:31 2015 +0200
+
+    num2date/date2num added to main module import
+
+commit c7dfd08c9d7356dbcf746f0ad35f92f05f6ec2c6
+Date:   Tue Apr 21 13:58:45 2015 +0200
+
+    Removed MyDateFormatter2
+
+commit 92a032044b6b4557f42d405614e0376894ea4744
+Date:   Mon Apr 20 23:25:26 2015 +0200
+
+    plot adapted to date2num/num2date
+    
+    Finished integration of LineOnClose
+
+commit 219b899f4b73fd110735394cc9e192a414124ac7
+Date:   Mon Apr 20 23:23:44 2015 +0200
+
+    DateFormatter adapted to num2date
+    
+    - Early attempt at patching standard locators/formatters to support best
+    date formatting
+
+commit e24b0b73a9298f3835dfb3163f1fdfb99b857118
+Date:   Mon Apr 20 23:22:31 2015 +0200
+
+    dataseries removed ls code for datetime "line"
+
+commit 6b5a8a9822da81e3be7ca8ebfdc2b3894aa2ad1c
+Date:   Mon Apr 20 23:22:02 2015 +0200
+
+    utils date to have own (or matplotlib imported) num2date and date2num
+
+commit 18e31ca045238d5a37d19f3f79d7027f4ed40a45
+Date:   Mon Apr 20 23:21:25 2015 +0200
+
+    feeds adapted to using num2date and date2num
+
+commit 6fdee441cf5219aa75a62fd824cb88e888800b11
+Date:   Mon Apr 20 23:20:45 2015 +0200
+
+    linebuffer removed list support and ls code
+    
+    - added datetime, date and time functions using num2date
+
+commit 70baf0b401773de329c059b5f68a20c57671ede0
+Date:   Sun Apr 19 00:58:00 2015 +0200
+
+    plot made submodule and finance functions rewritten
+    
+    - finance functions support a legend now
+
+commit 144dd9917ee99f21d1aee205e53b67008aec47a3
+Date:   Sun Apr 19 00:57:08 2015 +0200
+
+    buysell change of plotting param (adapt to new plot)
+
+commit 240ea9c8461b4dec9c733556f7dbabbc0622f0fb
+Date:   Sun Apr 19 00:56:49 2015 +0200
+
+    lineiterator changes to plotting defaults
+
+commit 363cb7ce60c994d359f180274481e104fecebb5c
+Date:   Sun Apr 19 00:56:15 2015 +0200
+
+    macd cosmetic plot change for the histo line
+
+commit c3361e6996dc5150bdf7a327baa87ae9e8372666
+Date:   Sun Apr 19 00:55:43 2015 +0200
+
+    dataseries clarified TimeFrame getname
+
+commit a8b88b8cd6eb30637724b67638593831623d813d
+Date:   Sun Apr 19 00:55:00 2015 +0200
+
+    cerebro changed plot import to plot call
+
+commit afc4736c8e8a80de2f3a464e531dd25160dbd144
+Date:   Sun Apr 12 23:45:43 2015 +0200
+
+    plotting further work on rewrite
+    
+    - added tableau color palettes
+    - scheme controls which color is returned from index
+    - corrected coloridx control to start at -1 (is getting +1 in plotind)
+    - improved label behavior and datalabel is now mostly in the title
+
+commit 3c6f828531145ff50fa7e4da2701a3bde8ff9017
+Date:   Sun Apr 12 23:44:00 2015 +0200
+
+    lineiterator/buysellobserver changed old "linelabels" parameter to plotlabels
+    
+    - having the meaning that all line labels have to be displayed
+
+commit 91687752256eda9ad4ccfee81ea995da8e2616e0
+Date:   Sun Apr 12 23:42:41 2015 +0200
+
+    stochastic changed plotting style of d line
+
+commit af02e60e9180adab063c93c229539388e243ade5
+Date:   Sun Apr 12 23:42:23 2015 +0200
+
+    macd changed transparency level of histogram bar
+
+commit 747ad925f52b172c44b24dae1a224e8a26fd5c3b
+Date:   Sun Apr 12 23:42:02 2015 +0200
+
+    bollinger changed plotting style of main (mid) line
+
+commit 410b6f844017599aecfb4156c8447779cfe222bf
+Date:   Sun Apr 12 11:36:49 2015 +0200
+
+    plot.py rewritten to simplify  and support location plotting, zorder and tags
+
+commit fd04b0454bc2f2d55c7982f2a4f5a858627e86f6
+Date:   Sun Apr 12 11:35:50 2015 +0200
+
+    LineRoot/Single/Multiple initial support for bitwise operations
+    
+    -- added intify operator which should support using "int"s inside the
+    operations
+
+commit 743c86c20ff0d19a730faa834c0a8a15717da5a5
+Date:   Sun Apr 12 11:35:05 2015 +0200
+
+    LineIterator added default for plotabove (False)
+
+commit 822c70e74d81536012c208bb39c83bc49e7c7dc4
+Date:   Sun Apr 12 11:34:35 2015 +0200
+
+    MACDHistorgram renamed to MACDHisto and changed histo plotting params
+
+commit 2b696d7111b74cdbb77c611a2013f2c6f736c7f2
+Date:   Sun Apr 12 11:34:14 2015 +0200
+
+    Allias BBands for BollingerBands
+
+commit 9280e31c5b27b1776ea2005c70f2d560da46e031
+Date:   Sun Apr 12 11:33:59 2015 +0200
+
+    Cerebro Reminder Note to change "in" testing operator
+
+commit 0fd2e88797453e65c21e506603d2d313f5a35643
+Date:   Mon Apr 6 23:26:11 2015 +0200
+
+    plotting of name, compression and timeframe
+
+commit ba7823b83faa1dcd50b6c48809a4b1c9cd9f3759
+Date:   Mon Apr 6 23:25:50 2015 +0200
+
+    feed support of name, compression and timeframe parameters
+
+commit d8116cf286e8e9173fb36a3d7ce0dc50196d4c8c
+Date:   Mon Apr 6 23:25:22 2015 +0200
+
+    Adapt defined feeds to removal to change DataFeed to Data
+
+commit 6a47309536ff73758013ad4ddf99cb2b4b89de93
+Date:   Mon Apr 6 23:24:44 2015 +0200
+
+    Removed _name from LineSeries (moved to DataSeries)
+
+commit 704b14d6f82353cd347a890f0ac6b5e573378004
+Date:   Mon Apr 6 23:24:19 2015 +0200
+
+    Added TimeFrame definitionin dataseries
+
+commit 9415768ab5c2ae776c2b0084c66b2eecf913403d
+Date:   Mon Apr 6 21:16:14 2015 +0200
+
+    Adapted test3 to use the direct comparison operators
+
+commit e7f4f69b3dfddcef26a1db38e814e61ebfaaed8a
+Date:   Mon Apr 6 21:04:00 2015 +0200
+
+    Operations' definitions moved up to LineRoot to be common
+
+commit 3a2583125838860b05bd09a23a292736764e4834
+Date:   Mon Apr 6 21:02:44 2015 +0200
+
+    Single line LineSeries return line instead of object
+
+commit d61ad57b824d31ce9958ec083abca9d70196760c
+Date:   Mon Apr 6 21:01:18 2015 +0200
+
+    Whitespace cleanup
+
+commit 5536373cc09c7ab0a4c0ff90bca9335826e60092
+Date:   Mon Apr 6 00:15:23 2015 +0200
+
+    - Assignment operator to replace bind2lines calls
+    
+    - LineAssign no longer used (bind2lines used internally)
+    - Rewrote Stochastic to avoid circular line binding
+    - Added _once and once support to atomic operations
+
+commit 663f35b56b84060fe6ce12fa4c5c5a029275c20b
+Date:   Fri Apr 3 19:42:24 2015 +0200
+
+    Revamped the architecture to allow direct "line" usage along LineSeries, enabling natural operations along the way
+
+commit 7b602c462390dbdb86860d627f26905c33dda98b
+Date:   Thu Mar 26 19:11:20 2015 +0100
+
+    metabase fixes to avoid breaking due to new comparison operators in LineSeries
+
+commit a1fd5574bd1a3d37ca0cdd77ea998671d8cf26c3
+Date:   Thu Mar 26 19:10:50 2015 +0100
+
+    LineSeries comparison operators defined
+
+commit 13c871fdd27a95549cd0f512745cf1772ea15795
+Date:   Thu Mar 26 19:10:20 2015 +0100
+
+    linebuffer cosmetic change
+
+commit 8873e39fa11a346d320f7183ffdb79a78f09bf04
+Date:   Thu Mar 26 19:10:05 2015 +0100
+
+    Highest/Lowest leftovers corrected in next from previous incarnation
+
+commit 0e1778fb1a282968558ba28af854ce3184470042
+Date:   Thu Mar 26 12:50:42 2015 +0100
+
+    Lines and LineBuffer now know which LineSeries is the owner
+
+commit 28ad2591dcf297ac1247188bde1f6734c7df412a
+Date:   Wed Mar 25 23:19:23 2015 +0100
+
+    ma MovingAverageWeighted added and multiple inheritance from MovingAverageBase added
+
+commit f200925dda9be7a00bf48ec58820172f6a6992b3
+Date:   Wed Mar 25 23:19:00 2015 +0100
+
+    lineseries Lines supporing multiple inheritance (primitive)
+
+commit 952af72c069565f953af1d213576892526ecf912
+Date:   Wed Mar 25 23:18:18 2015 +0100
+
+    metabase
+    
+    - findbases reworked to find also righthand bases
+    - AutoInfoClass support multiple inheritance (primitive)
+
+commit 38adf11ce8da32e4ee13d3fe64bbd717d27ca43a
+Date:   Wed Mar 25 23:17:01 2015 +0100
+
+    lineutils - SumAvWeighted changes
+
+commit c69f2d4048e5ef302a79129bb8703abd8323d652
+Date:   Wed Mar 25 05:56:40 2015 +0100
+
+    AutoInfoClass updated to use OrderedDict
+    
+    - Adapted some methods
+    - Adapted external classes relying on _getpairs
+
+commit 63cdb2ef37796fa4146cef419b275defcfaeb152
+Date:   Tue Mar 24 14:46:56 2015 +0100
+
+    Cosmetic changes to _plotlabels in atr/dpo/rsi/stochastic
+
+commit 8eb912e31ecbd06dae05fc5610ad9077d476ea64
+Date:   Tue Mar 24 14:43:37 2015 +0100
+
+    Stochastic cosmetic and refactoring changes
+
+commit 74141f0bb0ccaef9baa61a8f2ed13511c2164b93
+Date:   Tue Mar 24 14:39:40 2015 +0100
+
+    RSI rewritten to use atomic operations
+
+commit dac29b0ea09003e01f0efb6176c243aec6a90ebb
+Date:   Tue Mar 24 14:38:56 2015 +0100
+
+    MACD tweaked to used alias and bind2lines aliases
+
+commit 6637b2b2a79f54ee88ef985541e9af88c5822d53
+Date:   Tue Mar 24 14:37:51 2015 +0100
+
+    MovingAverages rewrote to use atomic operations
+
+commit 58d7e9f2d799e6c9fa664d85b5ebb70dadb74bd6
+Date:   Tue Mar 24 14:35:47 2015 +0100
+
+    DetrendedPriceOscillator slightly tweaked
+
+commit 2369891aa8403e302944133d4f7f545559eff161
+Date:   Tue Mar 24 14:35:06 2015 +0100
+
+    BollingerBands and StandardDeviation rewritten to use atomic operations
+
+commit 33a06727ac480b7df1d3ffa17cd0b070dfb4fcbc
+Date:   Tue Mar 24 14:11:39 2015 +0100
+
+    TrueRange and AverageTrueRange rewritten using atomic operations
+
+commit 9cfef94bb5ed30427aa7e109e778db6e0d9f0e10
+Date:   Tue Mar 24 13:42:28 2015 +0100
+
+    LineIterator added aliases to Price Lines with intervening base class
+
+commit 3075002997993b042466e13f09368d6adcadd945
+Date:   Tue Mar 24 13:41:40 2015 +0100
+
+    Lineiterator implemented addminperiod to take over setminperiod
+
+commit 321f0fa35f79f90299e81ade8c157b0c392fdfd0
+Date:   Tue Mar 24 13:41:03 2015 +0100
+
+    LineIterator adds alias for data and lines to the instance
+
+commit c1c732620a073e5464717d6ed62b189d003e78c4
+Date:   Tue Mar 24 13:40:41 2015 +0100
+
+    Lineiterator implements a oncestart for the 1st data in runonce
+
+commit 570501a458422d668db931e02f53caff3131348f
+Date:   Tue Mar 24 13:39:57 2015 +0100
+
+    Refactored, improved and expanded lineutils in utils into 3 different lineutils, linesutils and lineoperations
+
+commit 889e454383799889473469f30f4b58a345f086f6
+Date:   Tue Mar 24 13:38:15 2015 +0100
+
+    Indicator derived classes will be autoinit'd up the chain
+
+commit c0d15ba63d922cd3294f27e772a185fbf13ee163
+Date:   Tue Mar 24 13:37:02 2015 +0100
+
+    updated indicators.__init__.py
+
+commit 3bcd9b459a9ad6b680fec2a61bcd89151837b753
+Date:   Tue Mar 24 13:36:04 2015 +0100
+
+    linebuffer ago changed to positive semantics (because ago already implies backwards)
+
+commit 539a7ffb15d3ae54a66567f9e7ae5f701628bb54
+Date:   Tue Mar 24 13:35:10 2015 +0100
+
+    lineseries.LineSeries __init__ takes *args **kargs to avoid errors with automatic initialization
+
+commit 9aac104f2269e65153e444a767beac2a66224961
+Date:   Tue Mar 24 13:34:35 2015 +0100
+
+    metabase added "p" as alias for params in objects
+
+commit 51701f96a276460a07d5c33a4bf6d9fdf68420f3
+Date:   Tue Mar 24 13:34:13 2015 +0100
+
+    __init__.py reduced cluttering from subpackages
+
+commit 280054302db4721f3113dc8a3ddfb59679014501
+Date:   Fri Mar 20 15:01:12 2015 +0100
+
+    LineIterator adds data, data0 ... dataN aliases to iterators
+
+commit 0729d291e499f74c64567f0c0b70d0a6ae973825
+Date:   Fri Mar 20 14:31:10 2015 +0100
+
+    Lineiterator - bindlines aliased to bind2lines which may be more readable
+
+commit 25adf8bcf591a6a03d1c9f43a4dcdac1537dd519
+Date:   Fri Mar 20 14:30:36 2015 +0100
+
+    DetrendedPriceOscillator - DPO
+    
+    - Reversed Naming (the long name is the alias the short one is the
+    classname)
+    - Fully commented
+    - bind2lines refers to named 'dpo' line
+
+commit 18702ad3f72f99317f4fa8c49f9fc8940488d814
+Date:   Thu Mar 19 23:47:19 2015 +0100
+
+    atr changes
+    
+    removed once
+
+commit 349e43601855e518be36525f854fed94500e4b85
+Date:   Thu Mar 19 23:47:05 2015 +0100
+
+    bollinger bands
+    
+    -added some small utility indicators
+    - removed once
+
+commit fdf19834c6d893884dfa9ea1ab221a30ac4d42e3
+Date:   Thu Mar 19 23:46:35 2015 +0100
+
+    macd changes
+    
+    - removed once
+
+commit 0d8fefbbb29218be36b86980263fa3863c7b0dc2
+Date:   Thu Mar 19 23:46:17 2015 +0100
+
+    rsi changes
+    
+    removed next and once
+
+commit ccdf1da2539a065c8d896b3bd8bf2cf97b8f103c
+Date:   Thu Mar 19 23:45:37 2015 +0100
+
+    stochastic changes
+    
+    - rewrote to simplify class hierarchy interaction
+    - once removal
+
+commit 4dbd94741bbd6ac9c833af7525f9c3afbb90670d
+Date:   Thu Mar 19 23:44:55 2015 +0100
+
+    ma changes
+    
+    - using _autoinit to skip parent __init__ calling
+    - cleanup
+    - MA renamed SMA
+    - SMA (Smoothed) renamed SMMA following best industry practices
+
+commit 1692e46834a2be3e461ff914edf86400aaf0c319
+Date:   Thu Mar 19 23:43:14 2015 +0100
+
+    Indicator patches non-needed generic once (using next) implementations to avoid call overhead
+    
+    - And avoid having empty "once" functions if an indicator works with
+    indicator composition and linebinding
+
+commit 2e3bcd88f25c645de7ba6ebec01257b492fd25ed
+Date:   Thu Mar 19 23:23:37 2015 +0100
+
+    strategy - removed old class attribute _cash_plus_value
+
+commit 967dd5b7c2267c4e61ec233dcacc201aee8c4e79
+Date:   Thu Mar 19 23:23:19 2015 +0100
+
+    lineiterator - bindlines commit continued
+
+commit eb4c349fc24137d3d13d5276b14f4b45e5f8f5b0
+Date:   Thu Mar 19 23:22:57 2015 +0100
+
+    bindlines accepts linealiases (and line indices)
+    
+    - old bind2lines removed
+
+commit 486b8fc86fcfdd82c150d34871b8f8cf02a4b0f6
+Date:   Thu Mar 19 23:21:58 2015 +0100
+
+    lineiterator- autoinit rewrote (Py2/Py3 compatible) simplified and working
+
+commit 13953a78167ab72f3719b7dc9881094f79b4e720
+Date:   Thu Mar 19 23:21:21 2015 +0100
+
+    lineiterator - finbases moved to metabase
+
+commit 2207458e55ec99b2ef9d1ac32f8c98511fddc732
+Date:   Thu Mar 19 23:20:47 2015 +0100
+
+    metabase gets findbases from lineiterator
+
+commit dd734f3ac24433385f81319893a26ee304d3590f
+Date:   Tue Mar 17 23:59:26 2015 +0100
+
+    dpo cosmetic changes
+
+commit 7a6f6e5e744c2fd5f34c2c7ecb86459ed6a20454
+Date:   Tue Mar 17 22:03:03 2015 +0100
+
+    Added DetrendedPriceOscillator
+
+commit 3aa1479aece7bddd7caba767cc2c3634ddb5adc8
+Date:   Tue Mar 17 19:26:10 2015 +0100
+
+    strategy _oncepost correction for at once execution
+    
+    - minperiod was not being taken into account and next was being called
+    from the first bar
+
+commit 668f4c3b72eb72c1cf769f762cf30ee3d99062b2
+Date:   Tue Mar 17 19:25:15 2015 +0100
+
+    macd and stochastic cosmetic changes to secondary line plots
+
+commit b26523006d5eacf4b1071e5b454c79ce07c7dcfe
+Date:   Tue Mar 17 16:43:23 2015 +0100
+
+    atr ramp-up phase corrected
+    
+    to avoid overlapping on first value if wrapping to negative when
+    feteching the negative value
+
+commit 1bfc98139208f14a76b2af85595831f7a11e4284
+Date:   Tue Mar 17 15:05:54 2015 +0100
+
+    rsi starting calculation correction
+    
+    - wrapping over to last value with preloaded data was forcing the wrong
+    calculations at the start
+
+commit 0b2138c1c4137e3d0ae8044a51aea4b6b89952a2
+Date:   Tue Mar 17 13:06:12 2015 +0100
+
+    bollingerbards error correction in next
+
+commit 3fb7f47af5a95c0b441070f4180cc1e2e91ed3d1
+Date:   Tue Mar 17 11:29:22 2015 +0100
+
+    Renamed MyCSV to VChartCSV
+
+commit 4c40d8bbb1b9e347f76ec2ab725fef99f912493e
+Date:   Tue Mar 17 11:10:15 2015 +0100
+
+    plot support for same colors, BollingerBands and extra util indicator
+    
+    - BollingerBands along StdDev added
+    - LineSummation added to LineUtils
+    - plot supports plotlines defining a _samecolor for lines to copy the color of the previous line
+    - BollingerBands added to test3
+
+commit d2b7f48a6c83b2ceb613044b16a0fbe7cca8c8c0
+Date:   Mon Mar 16 22:16:44 2015 +0100
+
+    Operations Observer rewrote as ObserverPot and sub Observer
+
+commit 6c15db7ce0e955f99c7d14c67479e108e8848617
+Date:   Mon Mar 16 22:16:21 2015 +0100
+
+    buysell rewrote as ObserverPot and sub Observer
+
+commit af4d0f8444da85fd83f20b171b9012241eb9d8f9
+Date:   Mon Mar 16 22:15:36 2015 +0100
+
+    plot support of plotskip parameter in plotinfo
+
+commit becc255b0603fbdc86ffce5fa85613088009822c
+Date:   Mon Mar 16 22:15:21 2015 +0100
+
+    import analyzer into main package
+
+commit 86364ba4367d63fc63652479d324635751f19add
+Date:   Mon Mar 16 22:15:10 2015 +0100
+
+    Analyzer added
+
+commit 8f1f5eb7a81653c44aa504e98b152930d9780f4c
+Date:   Mon Mar 16 22:14:48 2015 +0100
+
+    observer changes
+    
+    - Intermediate base class use
+    - ObserverPot definition to hold "per-data" LineObservers
+    - Observers copy the top-owner (a Strategy) datas to avoid having to
+    pass them down the chain (an observer sees everything
+
+commit d7178cdc2fa9dbf2d3346ffaafa58b1c501ad537
+Date:   Mon Mar 16 22:13:36 2015 +0100
+
+    strategy changes
+    
+    - Adoption of new storage for indicators/observers
+    - Analyzer auto-creation and deletion method
+    - Use of new intermediate base class
+
+commit b62d796a29933732e47e299f546ac821e3665562
+Date:   Mon Mar 16 22:11:57 2015 +0100
+
+    indicator - Indicator uses intermediate Base Class
+
+commit 4fed631233a80964166509ebb97d08a1e52417d8
+Date:   Mon Mar 16 22:11:34 2015 +0100
+
+    lineiterator reordering and enhancements
+    
+    - OwnerCls class attribute to find owner (instead of fixed LineSeries)
+    - datas and owner found during donew (earlier than dopreinit) to allow
+    for interception in sub-MetaClasses
+
+commit f4866abc61175889fa21f7dc0c5d94d501698058
+Date:   Mon Mar 16 22:09:11 2015 +0100
+
+    lineiterator branches Baseclasses
+    
+    - Baseclasses from LineIterator for Indicator/Strategy/Observer to avoid
+    circular import references if checking for isinstance/issubclass to find
+    the owner (done in observers)
+
+commit 6049e7948413f8be4e51549be53be1aaa31e5c93
+Date:   Mon Mar 16 21:53:31 2015 +0100
+
+    lineiterator .. plotskip parameter to plotinfo
+    
+    - Allows to skip a plot even if it has been set to plot. Meant for
+    chained LineObservers
+
+commit 5cb0879aae4da2adde5416a5c10c1884adcb521a
+Date:   Sun Mar 15 21:34:05 2015 +0100
+
+    LineSeries plotinfo updated from kwargs
+    
+    - before params are also updated
+
+commit 6e876978cc203e0783fac6ff124968240e671a2a
+Date:   Sun Mar 15 20:09:35 2015 +0100
+
+    test3 added new indicators and cosmetic changes
+
+commit fd4471743619ca0e1e9dc292c6d3ba71b91e0cb0
+Date:   Sun Mar 15 20:09:10 2015 +0100
+
+    backtrader packages import from observer
+
+commit 14e8441723bec1361b0610461784d89ed4a1d336
+Date:   Sun Mar 15 20:08:49 2015 +0100
+
+    plot changes to use new indicators/observers storage
+
+commit e01b65dbd9d75b6574a8e803ffef7a28891374ae
+Date:   Sun Mar 15 20:08:25 2015 +0100
+
+    observers.buysell
+    
+    - adapted to separated LineObserver
+
+commit 67d3303599cbd5ceaf40f4e4f9428dffba3c4a08
+Date:   Sun Mar 15 20:08:11 2015 +0100
+
+    observers.cashvalue
+    
+    - drawdown and maxdrawdown
+    - adapted to separated LineObserver
+
+commit 059b2397b979f8fbaa0118c3a7ceb7d2a63f0674
+Date:   Sun Mar 15 20:07:29 2015 +0100
+
+    observers.Operations
+    
+    - using isclosed from Operation
+    - using new separated LineObserver
+
+commit d2cc187627b287c3ca593f46fc15716638f51c14
+Date:   Sun Mar 15 20:06:15 2015 +0100
+
+    added observer
+    
+    - to hold LineObserver separated from LineIterator
+
+commit 71839779925d40046cf5c9712cac84b0956a7b34
+Date:   Sun Mar 15 20:05:47 2015 +0100
+
+    indicator.Indicator
+    
+    adapt to new storage for subindicators
+
+commit aac69f8f73305c25b90b6175759a020275ecd625
+Date:   Sun Mar 15 20:05:22 2015 +0100
+
+    lineseries cosmetic changes from dict to {}
+
+commit c2075f7854cb68ee2f1e57eda8ec44dac4b13b1f
+Date:   Sun Mar 15 20:04:28 2015 +0100
+
+    reworked indicators/observer
+    
+    - unified storage on a "ltype" (lineiteratortype) dict
+    - reworked access to the storage for indicators and observers
+    - added access methods to the different indicators/observers
+
+commit 1f305d1c3687fb665b7e707cd66848c3ea9ceb09
+Date:   Sun Mar 15 20:02:23 2015 +0100
+
+    feeds adapted to new AutoInfoClass getmethods
+
+commit 3cd638d4b67ce5ffbc35111066324d8b31f3e301
+Date:   Sun Mar 15 20:01:49 2015 +0100
+
+    plot legend transparency from parameters for all instances
+
+commit 715b2c04786ab1ae24953f61b11e92e9768c2650
+Date:   Sun Mar 15 19:59:09 2015 +0100
+
+    metabase multiple changes
+    
+    - reworked Params to AutoClassInfo working with
+    tuples/lists/dict/OrderedDict and simplified
+    - added extra getxxxx methods and differentiated those that could be
+    simply classmethods
+
+commit 6ccc8ff738e460cb95d5567cb4fca36abc026f74
+Date:   Sun Mar 15 19:57:23 2015 +0100
+
+    datapos.Operation changes
+    
+    - wasclosed changed to isclosed
+    - added isopen
+
+commit d265b338dc7409a52d2d25819d5c5f89471d1812
+Date:   Sat Mar 14 00:17:06 2015 +0100
+
+    test3 expanded with more indicators
+    
+    - MACDHistogram
+    - RSI
+    - Stochastic
+
+commit 9e75aa4f84ea3a97fcded136965c99c3a0a79329
+Date:   Sat Mar 14 00:16:40 2015 +0100
+
+    plot adapted to new plotinfo/plotlines
+
+commit cf57623517c940bf2f7395733c4e33f28028f650
+Date:   Sat Mar 14 00:14:35 2015 +0100
+
+    Indicators/Observers adapted to new plotinfo/plotlines
+
+commit fbb888a8950281a916a6bc1ed90be5f3664fc6ed
+Date:   Sat Mar 14 00:12:22 2015 +0100
+
+    lineiterator changes to new plotinfo
+    
+    - Removed class attributes
+    - Integrated the attributes in the plotinfo structure
+
+commit 023cc93ca7b17d14750df58b2213f6ea5d19cb53
+Date:   Sat Mar 14 00:10:12 2015 +0100
+
+    LineSeries support for plotinfo and plotlines
+
+commit 69c5ff53c364a325b3c6e912f11e529250eeec38
+Date:   Sat Mar 14 00:08:23 2015 +0100
+
+    metabase changes and additions
+    
+    - Improved Params with _getkeys ynd _getkwargsdefaults
+    - Added AutoInfoClass which (will may eventually cover Params) covers
+    the cases for plotinfo and plotlines
+
+commit 490053c4473f0ae98f3bfaded05dea3caa23ada0
+Date:   Sat Mar 14 00:05:13 2015 +0100
+
+    datapos.Operation comment clarification
+
+commit 73f08686432b381739ab1855976bc93360d44a4d
+Date:   Thu Mar 12 13:32:39 2015 +0100
+
+    Updated logic to Operation.wasclosed
+    
+    - simplified the entire execution bit check
+
+commit 619234b1f07f685e39ac5c7766043358d083b3fb
+Date:   Thu Mar 12 13:32:13 2015 +0100
+
+    DataPos
+    
+    - Position Logic updated
+    - Returned sign for opened, closed units clarified and set to the
+    original sign of the size passed to update the position
+    - Documentation added
+    - Operation class added to keep track of operations
+
+commit 47391e936069fc75b9e09b9d6246573bdc5b4498
+Date:   Thu Mar 12 12:22:48 2015 +0100
+
+    observers, notifications and once steps changes
+    
+    - Controls steps when running once (taken from Cerebro)
+    - Order notification changed to allow observers to see what's happened
+    - Test observers included (to be removed/formalized)
+
+commit f86487282084a61b181aa4e417d618d88fcd10ef
+Date:   Thu Mar 12 12:20:15 2015 +0100
+
+    cerebro simplification
+    
+    - unified broker steps for normal run and once
+    - moved once steps for strategies to Strategy
+
+commit dcc9128fdc6fc85e0a54dd6d70d9cabade6acd79
+Date:   Thu Mar 12 12:19:21 2015 +0100
+
+    broker adapted to Position changes
+    
+    - accounts for changes in position sign clarifications for updates
+    (opened, closed)
+
+commit 49040155dbb470041671738d60b92f3495f7e6f2
+Date:   Thu Mar 12 12:16:07 2015 +0100
+
+    lineiterator comment extended for clarity
+
+commit 209762f2dc271a69268c93e1342e2226d20e1aff
+Date:   Thu Mar 12 12:15:53 2015 +0100
+
+    observers subpackage created
+    
+    - buysell observer
+    - profit and loss observer
+    - cash and value observer
+
+commit 5e5e145c1fae0173c5a0de773bf3a4d4d0403720
+Date:   Thu Mar 12 12:14:10 2015 +0100
+
+    OrderData created using argument names for clarity
+
+commit 0f06e92a1dfab11521a76a120132657e980a3882
+Date:   Thu Mar 12 12:13:41 2015 +0100
+
+    Plotting rework
+    
+    - Observers properly considered
+    - Grid assignment reworked
+
+commit f7af599f08549a742becd7a538f708bc5e351d74
+Date:   Tue Mar 10 13:54:29 2015 +0100
+
+    Moved operations to an observers package
+
+commit 2ccea9add7b365259d14ddb2ba891c97a7e2a1b2
+Date:   Tue Mar 10 13:54:12 2015 +0100
+
+    Reordered subpackages imports alphabetically
+
+commit ad88f78cd14c225f45056e10ca2897895dfad9a7
+Date:   Mon Mar 9 04:14:14 2015 +0100
+
+    Broker changes
+    
+    - Used external Data Position implementation
+    - Honors the new information to be stored in order execution
+    - Reimplementation of execution in one step
+
+commit 38a53d88f361ddb52d1f3eb0d327c85c6653a28c
+Date:   Mon Mar 9 04:13:03 2015 +0100
+
+    Data Position implementation
+
+commit f5a38b821c717bf27afcf2dcac6d4e2a3a07caef
+Date:   Mon Mar 9 04:12:40 2015 +0100
+
+    Order execution bits
+    
+    - Each execution part of the order is recorded invididually
+    - Extra information per "bit" stored (opened, closed contracts,
+    commission, value)
+
+commit 58621d1eac46983d7cb285a7a22c7356f24d3410
+Date:   Wed Mar 4 06:55:20 2015 +0100
+
+    datapos.py holding Position object
+    
+    attempt to move it away from broker
+
+commit 51d79f602b3ad2d7aefa9f78df18b112d2e9bee1
+Date:   Wed Mar 4 06:54:45 2015 +0100
+
+    Python3 compatibility changes
+    
+    - Metaclasses
+    - xrange (only survives in Python2 with potentially large ranges in once
+    functions)
+    - str for dynamic class creations
+    - bytes for string operation functions
+    - iteritems/itervalues ported to values/items as nothing big would be
+    expectable
+    - map changed to list comprehensions where an iterator would not fit
+
+commit c5cc4b19ad2afbf361f76a184485bb257d56110c
+Date:   Wed Mar 4 06:04:44 2015 +0100
+
+    Added python3 as supported in setup.py
+
+commit 6200aec2154c4ccf930f3b50126c24ea1928712b
+Date:   Wed Mar 4 06:04:22 2015 +0100
+
+    removed not used constants.py
+
+commit ca61b11f8554ef99baaaf529dbd1ef770c18275f
+Date:   Tue Mar 3 15:18:28 2015 +0100
+
+    Further changes to add profit and loss (per operation) lines
+
+commit 5d8d997cd0240b313d6db817a4575f924b126132
+Date:   Sun Mar 1 00:20:07 2015 +0100
+
+    Plot support for Cash/Value Observers
+
+commit 97bc01cbd63c9c2348754b3a19a16ce68d3527b8
+Date:   Sun Mar 1 00:19:40 2015 +0100
+
+    Strategy/Operations
+    
+    New Cash and Value Observers with integration into Strategies
+
+commit 962fff5e863904546267417365b0e2005c82f0c7
+Date:   Sun Mar 1 00:18:51 2015 +0100
+
+    Indicator/LineIterator
+    
+    - Moved plot/plotlegend/subplot back to LineIterator so it can be
+    applied to other subclasses like LineObservers
+    
+    - Moved also plotlabel and _plotlabel to lineiterator
+    - plotlabel only adds now () if the returned sublabel is not empty
+
+commit b8ec8639b6ef7d82e9336eb7c473c9c93830af3f
+Date:   Sun Mar 1 00:17:08 2015 +0100
+
+    test3 removed no longer needed preload=True
+
+commit d9385ba4d32f41944f33ef2f0ef5651609967744
+Date:   Sat Feb 28 22:03:07 2015 +0100
+
+    Further test reordering
+
+commit e5269be2cf0e0dc727f34987213416effa2c5454
+Date:   Sat Feb 28 22:02:11 2015 +0100
+
+    Moved tests to independent test directory
+    
+    - keep testbase to test the development version
+    - removed test2
+    - test uses the full dataset
+    - moved flushfile inside backtrader.utils so it can be imported from
+    there
+
+commit 4eb872e827751bc851d7bc3f3695fb9aa14b8daf
+Date:   Sat Feb 28 20:45:47 2015 +0100
+
+    Started adding advanced topics to documentation
+
+commit 9fb97f04fc59d663dcba0fc19063bf1fccdcdd40
+Date:   Sat Feb 28 20:45:32 2015 +0100
+
+    testbase inserts development path to sys.path rather than append
+
+commit 0242bd1bc81d28aacbeb3a22f284cce85bd8eca2
+Date:   Sat Feb 28 20:44:51 2015 +0100
+
+    MovingAverageSimple Corrections to once
+
+commit d896b24e410b1a4063dccfde07b5a276e1ca7144
+Date:   Sat Feb 28 20:37:59 2015 +0100
+
+    Indicators - implemented runonce support
+    
+    - MovingAverages - all
+    - Stochastic - all
+    - RSI and associated internal indicators - all
+    - ATR - all
+    - LineUtilities - all
+    - MACD - all (left a single implementation in place)
+
+commit b82fcbc9f9858dbaa8acfb8a6881ac13208bf415
+Date:   Sat Feb 28 19:50:02 2015 +0100
+
+    cerebro runonce support
+    
+    - Aded param runonce (default: True)
+    - Moved step by step inner strategy execution loop to method _runnext
+    - Added sibling method _runonce with support for a single run for
+    indicators
+    - Strategies will be executed step by step
+
+commit ac20e7a44fd775f077ae5c8384c4149b082c45cd
+Date:   Sat Feb 28 19:48:22 2015 +0100
+
+    lineiterator observers and runonce support
+    
+    - LineObservers managed at the end of _next
+    - runonce support
+    - removal of old preperiod definition
+
+commit d27f661c9219786cfefa3b5cd364e65f454490f3
+Date:   Sat Feb 28 19:47:01 2015 +0100
+
+    linebuffer runonce support
+    
+    - oncebinding method added to execute the linebindings in one pass
+
+commit b3eca0d1f91f478b342445bda1b31d00910cc74b
+Date:   Sat Feb 28 19:46:29 2015 +0100
+
+    Indicator support for runonce
+    
+    - added a default preonce and once to make sure indicators with only
+    "next" can also be calculated (of course they slow down the entire
+    process)
+
+commit 5364b07d7ba450bf79314d4e267134c71cf0a34d
+Date:   Sat Feb 28 19:45:38 2015 +0100
+
+    LineIterator/Indicator plot defaults
+    
+    - Moved plot/subplot to Indicator
+    - Added plotlegend (True)
+
+commit 710451069fc112421bdd46c87b30453a8a3bae36
+Date:   Sat Feb 28 19:44:45 2015 +0100
+
+    Strategy removal dataops hack
+    
+    - Lineinterator takes care of LineObservers directly
+
+commit 557bc3cd92fea08640b4b38302f8406f0aa9ee64
+Date:   Sat Feb 28 19:42:52 2015 +0100
+
+    Plot Changes, improvements
+    
+    - Buy/Sell markers have corresponding parameters now
+    - Single Line Indicators on subplots can skip labels (or not)
+    - Horizontal lines have corresponding parameters now
+
+commit d88f88dbd35a6c20b6b221b10042fef9d9cae1de
+Date:   Sat Feb 28 14:40:53 2015 +0100
+
+    LineSeries correction to foward
+    
+    - accepts "size" argument and passes it down to lines
+
+commit fb1886597591573b6972f7cdf59423d313afaa2a
+Date:   Fri Feb 27 18:17:41 2015 +0100
+
+    plot fully parametrized
+    
+    - Moved rest of "params" to PlotScheme
+    - The only parameter is a "scheme"
+
+commit 5418ce5974732c972f5798888c298101091447ed
+Date:   Thu Feb 26 22:42:17 2015 +0100
+
+    Separated installation from quickstart in the docs
+
+commit 94bf0d44807e32151115623e82422175ad846367
+Date:   Thu Feb 26 22:41:57 2015 +0100
+
+    apidoc automatically created files for code documentattion
+
+commit 1fb9d7d4601e4bfbc8dc5cc1ab313d0fe6215228
+Date:   Thu Feb 26 22:40:34 2015 +0100
+
+    documentation with napoleon
+    
+    - activated the use of napoleon to document code using google guidelines
+
+commit 9d699bf6f87531c6e5e6723d51fb9cf1a72b8ded
+Date:   Thu Feb 26 22:39:34 2015 +0100
+
+    feed bases changes
+    
+    - Moved fromdate/todate parameters to DataFeedBase away from the
+    FeedBase
+    - Reversed who copies the params from whom: now FeedBase copies the
+    params from DataFeedBase, ensuring any parameters defined in
+    DataFeedBase will be passed along to this if a general FeedBase is
+    chosen
+
+commit 49a9756d0331a10aa8b16527f837b1b813769587
+Date:   Thu Feb 26 22:37:55 2015 +0100
+
+    lineseries 1st documentation addition
+
+commit 5c3f2235e3c26c432e955695f58dc6cef40289a9
+Date:   Thu Feb 26 22:37:37 2015 +0100
+
+    linebuffer documentation
+    
+    - additionally redefining the init in the operational subclasses with
+    typecode default arguments to better serve the documentation
+
+commit ffbc15036871a235915899a69402b51cbd4ea79f
+Date:   Wed Feb 25 12:13:51 2015 +0100
+
+    Parametrized "separator" for token split into parameters for CSVDataFeedBase
+
+commit c650cb8cd70ab9f299b751becaae58560ec56ad9
+Date:   Wed Feb 25 00:15:04 2015 +0100
+
+    Documentation 1st serious work
+    
+    - Minor README changes
+    - Full QuickStart guide (for sure more to come)
+
+commit 3129b9e2b9969a820b23e79e471886da2b8adc7c
+Date:   Wed Feb 25 00:13:34 2015 +0100
+
+    Cosmetic changes to broker
+    
+    - Default cash is 10K (more realisitc)
+    - setcommissioninfo renamed to setcommission because no "commissioninfo"
+    object is actually being set (even if one is created behind the scenes)
+
+commit 5d7fd620e664d849618501cd4fbd4e19775b7262
+Date:   Wed Feb 25 00:12:10 2015 +0100
+
+    Order Notification mechanism reworked
+    
+    - Generalized the mechanism allowing for it to be inserted into
+    LineIterator _next mechanics
+    - This allows for len to be called in the notify method and report a
+    strategy having the same len as the clock
+
+commit b907f678eb9082eec7a091b3fc89005fe3e84a86
+Date:   Wed Feb 25 00:10:13 2015 +0100
+
+    Sizer initial setsizing method
+
+commit 27db131f436c2839c1342ca774a72cd9cba182b6
+Date:   Wed Feb 25 00:09:46 2015 +0100
+
+    Order isbuy/issell methods
+    
+    - to avoid user code bloating by having to call "isinstance"
+
+commit 2f59b3ef49f1880029d960358c2360eec11c77d8
+Date:   Wed Feb 25 00:08:43 2015 +0100
+
+    MovingAverage Indicators added missing operator import
+    
+    Needed for MovingAverageWeighted
+
+commit eaf19d87f37fcdebfc9e3d0a2bc252e43008d497
+Date:   Tue Feb 24 12:06:26 2015 +0100
+
+    Feed "fromdate" check correction
+    
+    Added a "rewind" to ensure the loaded bar (and still < fromdate) is
+    discarded before carrying on
+
+commit b9bfd42319276884a7c7a78afba59d5c0d6399db
+Date:   Mon Feb 23 17:02:19 2015 +0100
+
+    README.rst new attempt
+
+commit 296f0ef2b3ff6145a709076ccadbc5a984f72c76
+Date:   Mon Feb 23 16:45:44 2015 +0100
+
+    README.rst update
+    
+    To check the hyperlinks
+
+commit 277456be711fd9fa6ff164a4e2e6ce15e2eb9876
+Date:   Mon Feb 23 16:11:35 2015 +0100
+
+    index.rst maxdepth changed to 3
+
+commit 6cc5c9ca21002b348b1e14eae52ad304040d4270
+Date:   Mon Feb 23 16:11:19 2015 +0100
+
+    setup.py find_packages automatically
+    
+    - indicators and feeds subpackages not automatically included if not
+
+commit a646b4d90c0544088a7a7a171bde2b50c8e73104
+Date:   Mon Feb 23 16:10:44 2015 +0100
+
+    README fully reworked
+
+commit cf7dc71fb664b64e1e1ceb249f3d2c0a4f7af78d
+Date:   Mon Feb 23 16:07:32 2015 +0100
+
+    Strategy - Sizer Allocation to preini
+    
+    If not ... parameters for it cannot be set during __init__
+
+commit 56b6742aa06d61b6850847689ea18f2d02b883ed
+Date:   Mon Feb 23 16:07:01 2015 +0100
+
+    PlotScheme - Default Back to line
+
+commit 0fa8b587864cb6e2fe2bdc6ec291965f0074d4d2
+Date:   Mon Feb 23 16:06:46 2015 +0100
+
+    feed - FeedBases
+    
+    Let Exception propagate if a file (for example) cannot be opened to let
+    the user be aware of the error (before a Data Feed with 0 bars was being
+    returned)
+
+commit f4f2f081f31df51dc42c36f8e004d1d3daebb193
+Date:   Mon Feb 23 13:35:06 2015 +0100
+
+    Sphink Documentation Support and Introduction
+
+commit c2c333f0612ebde3aedc8d51024ca32c21527e50
+Date:   Sun Feb 22 22:52:22 2015 +0100
+
+    PyPi first integration support
+
+commit baf43cc5e5369e8cc008a32801b7ac60ba2114b4
+Date:   Sun Feb 22 22:51:58 2015 +0100
+
+    Tests to Samples reordering/renaming
+
+commit 2d1a36ec65006f84cd42b68a0c0be0f9b7446895
+Date:   Sun Feb 22 22:40:22 2015 +0100
+
+    Moved back LICENSE.txt to LICENSE
+
+commit 0bc761c2474b34730293ef5f709d70460e7a45d6
+Date:   Sun Feb 22 22:32:13 2015 +0100
+
+    Moved LICENSE to LICENSE.txt
+
+commit 17629c5017ff5465818b1779405ac8f9e53cb52f
+Date:   Sun Feb 22 21:37:36 2015 +0100
+
+    Changed README.md to README.rst
+
+commit 49bce23fa5c55253d754f29d480651311822e179
+Date:   Sat Feb 21 23:12:40 2015 +0100
+
+    Plot - Multiples/Changes
+    
+    - Added a "Scheme" to hold most parametrisation of a plot
+    - Changed to subplot2grid
+    - rows for 1sta data and rest of volume/data/indicator plots can be set
+    - implemented bar and candlestick
+    - volume as overlay or independent
+    - line plotinfo read from metavariable plotinfo now
+    - legend move out of indicator loop to allow for indicator on indicator
+    labels to show up in the legend
+    - x axis formatter only set for last subplot
+
+commit ea563da908d59735c6af04645e760bfabb394f74
+Date:   Sat Feb 21 23:06:56 2015 +0100
+
+    Stochastic - overbought/oversold params and settingg hlines and ticks from the params
+
+commit 0e898a3c54e3925c2bb6c13ef27b33bb7bdfe306
+Date:   Sat Feb 21 23:04:25 2015 +0100
+
+    RSI - Plotting Metainfo
+    
+    - Overbought, oversold hlines added as parameters
+    - hlines and ticks set from overxxxx params
+    - plotlabel and plotname set
+
+commit 268cbaf5c3d9d371955888b447b9126572a0b086
+Date:   Sat Feb 21 23:01:53 2015 +0100
+
+    MACD - Plotinfo changed from lines to plotinof metavariable and adapted to plothlines
+
+commit e9b04d5bab7278777c605b9d84b39d050a9526ca
+Date:   Sat Feb 21 23:00:47 2015 +0100
+
+    ATR - added plotting information (label and name)
+
+commit 304d9dacc0b40dd0b81353d36df304f879c72cd9
+Date:   Sat Feb 21 22:58:39 2015 +0100
+
+    Removed plotinfo from line definition
+    
+    - LineBuffer - removed plotinfo parsing and storing
+    - LineSeries - removed parsing of plotinfo from line definition
+
+commit 0d53a607c1ce8d79ac8a38e5759da86a60c327b6
+Date:   Thu Feb 19 09:27:06 2015 +0100
+
+    Legend location change for indicators
+
+commit 66c30be803e8315b4c10eace647b780cd6a71ab7
+Date:   Wed Feb 18 20:08:41 2015 +0100
+
+    Changed backwards indexing from positive to negative
+    
+    - Looking from bar before the current bar to be output must be sought
+    with -1 (before with 1)
+    - This aligns with Python's concept of "last" in an array/iterable ...
+    "-1". In our case -1 is the last value to have been output..
+
+commit 28c9581090cbdef42e4a8f6ac81ccd25ca921d46
+Date:   Wed Feb 18 19:13:27 2015 +0100
+
+    Closeposition in Broker must be checked
+    
+    comment added as reminder
+
+commit dd42bb38d0fd16af21a3d91b21213f133993ef0c
+Date:   Wed Feb 18 19:07:17 2015 +0100
+
+    test3 adding plot
+
+commit 8f9a7587bdce276e583063c2aeb0790734cbe39a
+Date:   Wed Feb 18 19:06:55 2015 +0100
+
+    Plotting of dataoperations from strategy
+    
+    - Dataoperations will be plotted along the corresponding data
+    - Check for number of subplots to ensure we have a subplot array
+    - Minor cosmetic changes to the charts
+
+commit 1439da9ddd66c9642c5baf453ff5fb18385f1fcf
+Date:   Wed Feb 18 19:05:29 2015 +0100
+
+    DataOperations added on a per data basis
+
+commit 30a3d906ed103d37455dc357b6717eaecd8fc508
+Date:   Wed Feb 18 19:05:11 2015 +0100
+
+    DataOperations Observer
+    
+    Keeps track of operations in lines
+
+commit 457e91af06701a00f341d995369f64b4e6373946
+Date:   Wed Feb 18 19:04:27 2015 +0100
+
+    LineObserver concept added
+    
+    - LineObserver is a LineIterator which is kept separate from indicators
+    and does not count for period calculations or indicator autoplotting
+
+commit e7f84d90b014cffb0face4732e35e1014375a95d
+Date:   Mon Feb 16 23:48:03 2015 +0100
+
+    Changed to broker property from cerebro instead of getbroker
+
+commit a6a90ba08406d0c27504e6dada7a11cfad750942
+Date:   Mon Feb 16 23:46:35 2015 +0100
+
+    Cerebro manages order notifications and single broker
+
+commit d59f054ed9688e45c9860f26efd5206bff0c6461
+Date:   Mon Feb 16 23:43:57 2015 +0100
+
+    Margin added as execution information bit
+
+commit 2d8ad7a5e9a3deaa1c710d5105bacd544662f7f6
+Date:   Mon Feb 16 23:43:35 2015 +0100
+
+    Notifications to queue and margin to orders
+    
+    - Notification will not be done by broker to strategy but by system
+    - Margin passed to order to ensure information about asset type can be
+    seen by entities examining the orders
+
+commit 9205849118812c1c7de6eeb863863e8baf8b44a8
+Date:   Mon Feb 16 23:42:11 2015 +0100
+
+    Adapted to single broker decision to simplify statistics
+
+commit 7c43508c2e5a4d2b1a0346a2bd021d872525806b
+Date:   Mon Feb 16 23:40:48 2015 +0100
+
+    Yet another correction for auto baseclass __init__ calling
+
+commit d2a1d11c8f31f076d2ed7ce55544fa124ae95c9f
+Date:   Mon Feb 16 23:39:46 2015 +0100
+
+    LineSeries added __init__
+    
+    To ensure the existence of im_func when looking for base classes
+    __init__ equality
+
+commit 145d2c8c2bacaf8bc84b030ee8d33a23da6796ce
+Date:   Sun Feb 15 21:12:28 2015 +0100
+
+    Broker sets value and commission in orders
+    
+    - closeposition and openposition do just that now
+    - cash, value and comission calculations moved to _execute
+    - value and comission passed on to order execution
+
+commit 93f02a1db4863da17f1c7d15b157e1bb02d4c687
+Date:   Sun Feb 15 21:11:11 2015 +0100
+
+    Order value and commission
+    
+    Orders now carry in executed value of operation and commission
+
+commit 5b13082b82e901d699feeb61e43fd6fe61d85927
+Date:   Sun Feb 15 21:09:48 2015 +0100
+
+    CommInfo Clean-up and changes
+    
+    - set on using "getattr" by removing all self.params
+    - getoperationcost simplified
+    - profitanloss now returns a profit and loss, no longer relying on the
+    logic of broker
+
+commit c9980da8834b21ef1ab7789a8d42b65dc7a2d216
+Date:   Fri Feb 13 15:34:51 2015 +0100
+
+    Moving Averages Plotting addition
+    
+    - Shortnames for the labels/legends
+    - plotlabel support
+
+commit e2a9683b6629254454fa8cc3c7876a6d90b54857
+Date:   Fri Feb 13 15:33:43 2015 +0100
+
+    MACD Plotting Support
+    
+    - Addition of line type for "histogram"
+    - Plotting of the 0 horizontal line
+
+commit 7db3fc1f9e692df31e46a7cb93e7aa2c1e2c474a
+Date:   Fri Feb 13 15:31:40 2015 +0100
+
+    Stochastic Plotting Support
+    
+    - Specific stochastic label generation added
+
+commit 270f86be2fe45dde67bd0e03e3e4fa97162ec756
+Date:   Fri Feb 13 15:30:51 2015 +0100
+
+    Plotter next implementations
+    
+    - improvements
+    - line labels
+    - legends
+    - separated pyplot show into a different method to allow creation of
+    several figures (one per strategy) before they are shown
+
+commit 59dcbcf95aa4aab4a4a42ccee6404d27bcfccc90
+Date:   Fri Feb 13 15:28:20 2015 +0100
+
+    test4.py slightly changed
+    
+    - Added MACD to the current indicators
+
+commit 1f6dda8db18dcb484b616d41268690849eeb6b05
+Date:   Fri Feb 13 15:27:06 2015 +0100
+
+    Cerebro plotter show addition
+    
+    Multiple strategies charts will be shown at once and not after the
+    previous is closed
+
+commit 8efc70ce1b7b71f3c66fa60dcb60d17cb7ccfb5d
+Date:   Fri Feb 13 15:26:25 2015 +0100
+
+    Indicator.(_)plotlabel methods
+    
+    - Support for labels for plotting
+
+commit b8fb53218d88611b757553a0cf51502789652458
+Date:   Fri Feb 13 15:25:43 2015 +0100
+
+    base classes init auto call changed
+    
+    Corrected to ensure the inits are not called twice from deep subclasses
+    which was duplicating the minperiod of subclassed classes
+
+commit 8863b71aa9f31ecbe72b32c0ec27e5a088f3a9df
+Date:   Fri Feb 13 15:24:19 2015 +0100
+
+    MetaParams._getvalues
+    
+    Returns actual params values as a list
+
+commit 81dc00a794720682bc8e32fd30c0e5e3c9109b2e
+Date:   Fri Feb 13 15:23:52 2015 +0100
+
+    LineSeries_getlinealias method
+    
+    - Translate backwards from line number to defined alias nams
+
+commit 923e357df2942952d31b0622bf99c41142c7d8ee
+Date:   Thu Feb 12 01:15:48 2015 +0100
+
+    test4 plotting example adapted to new automatic plotting
+
+commit b6706aa056eba20cad4c4cd2a848ecb4cae852eb
+Date:   Thu Feb 12 01:14:42 2015 +0100
+
+    plot module for automatic plotting
+
+commit e4da73a92c21410fbdab433b8c8f6b44d6554d4f
+Date:   Thu Feb 12 01:13:43 2015 +0100
+
+    Cerebro plot support
+    
+    - Added method which takes a "Plot" object (or None and creates one) and
+    arguments for the object
+
+commit 1dbb9dc49de2b1940b4da7f56177a0610ec5ad29
+Date:   Thu Feb 12 01:12:54 2015 +0100
+
+    Plot Support for Indicators
+    
+    LineIterator adds "plot" and "subplot" class attributes to set a default
+    for indicators
+    MovingAverages do always plot along the "averaged" data
+    MovingAverageBase introduced for future MovingAverages to have subplot
+    as False as a default
+
+commit 479dbe6caab011e58d7f92a3ee7b7b157451946c
+Date:   Thu Feb 12 01:09:39 2015 +0100
+
+    Extra info in "lines" for plotting support
+    
+    - LineSeries will parse extra arguments as "plotinfo" parameters to pass
+    to line
+    - linebuffer LineBuffer supports the plotinfo parameters passed by
+    LineSeries
+
+commit b7c9440a68840aec94fe24e5d9777cadf7cc4879
+Date:   Tue Feb 10 21:57:19 2015 +0100
+
+    Derived overriden  params full override
+    
+    - A param in a derived class now overrides the definition of the same
+    param in the class and not only the value at creation time
+
+commit 7796366bc8b1b7a0bdc04b996c3ad6b56a26a1a1
+Date:   Tue Feb 10 19:49:21 2015 +0100
+
+    Lines size correction and fullsize addition
+    
+    - Lines.size method returns only the number of "named" lines
+    - fullsize method returns the total number of lines
+
+commit f57e25bf3cdeae4575e07ca6072d3559788d5535
+Date:   Tue Feb 10 19:48:14 2015 +0100
+
+    Logic size value choice rewritten in LineBuffer.plot
+
+commit f2a2e0075a23f2feecc9fdc45d08bf9ad5539631
+Date:   Mon Feb 9 23:24:19 2015 +0100
+
+    test3 adapted
+    
+    - New strategy properties
+    - Notification of order meeting margin
+
+commit cba2b9c601aa57b81bb380ce789f5272c50b8946
+Date:   Mon Feb 9 23:23:39 2015 +0100
+
+    Cerebro/Strategy default broker and sizer
+    
+    - Changed cerebro to be the allocator of a default broker
+    - Strategy pulls default broker from cerebro
+    - Strategy uses properties for sizer, broker and position
+
+commit 06657179073015b17d57f421ddddabe41a884fa2
+Date:   Mon Feb 9 23:21:53 2015 +0100
+
+    Renamed positionsizer things to simply sizer
+
+commit 9817abac6f677ceebe7e2cf97fb7b8db4e86402f
+Date:   Mon Feb 9 23:21:34 2015 +0100
+
+    Added Order status strings
+
+commit f1c06e54e246f234a880f426300e6535a9b0878f
+Date:   Mon Feb 9 23:20:31 2015 +0100
+
+    Broker Margin Notification
+    
+    - Add missing notification to owner if an order hits margin limit when
+    executing
+
+commit 322d053cecf04f80eb24dd2bf9fde5c857c821fb
+Date:   Fri Feb 6 18:32:52 2015 +0100
+
+    Regular testing changes to test3
+
+commit e0dbe91b1a17aa3866d7f98b6231ade818b58ccf
+Date:   Fri Feb 6 18:32:12 2015 +0100
+
+    Full implementation of futures-like instruments cash adjustment
+    
+    - Recover already deducted (before order execution) cash on position
+    closing
+    - Deduct cash against closing bar price on position opening
+
+commit 2164180ba5bc546b32102be689ceec7cb40d05c8
+Date:   Fri Feb 6 18:03:54 2015 +0100
+
+    Refactored Yahoo CSV Data feed to use _loadline
+
+commit d41cd1aae50c7d2c3ed2b6702983cae29039e6a3
+Date:   Fri Feb 6 18:03:07 2015 +0100
+
+    Corrected bugs in MASmoothedNAN
+
+commit 866d8d5ae918450310b0fd52263a089ebcb6a99e
+Date:   Fri Feb 6 14:17:45 2015 +0100
+
+    Refactored Load Line and date check
+    
+    - Implemented fromdate/todate data feed check generically
+    - Adapted mycsv to refactoring
+
+commit 401c0766c18b3763be7d4f8d8bde64d52e71acdf
+Date:   Fri Feb 6 14:16:24 2015 +0100
+
+    Added rewind possibility for lineseries and linebuffer
+
+commit 4152765ae823b9c3c7344f37a7a0ba57e3f34c76
+Date:   Fri Feb 6 11:45:10 2015 +0100
+
+    Fix PosSizer default parameter in Strategy
+
+commit d3e2805fec3f5875ab386c54f1e11ef35c83f95c
+Date:   Thu Feb 5 23:40:49 2015 +0100
+
+    test3 logging and other improvementes
+
+commit f448a2434f3ba512696a7d9c329d1fa76cfd3209
+Date:   Thu Feb 5 23:27:05 2015 +0100
+
+    Adapted test3 to use PositionSizer
+
+commit 3e6d41b8a871308dcbd7bc2dbe1ec64100e92659
+Date:   Thu Feb 5 23:25:10 2015 +0100
+
+    Broker setcash and PositionSizer
+    
+    - Broker can now setcash after creation (mostly useful for automatic
+    instantiated broker)
+    - PositionSizer base and Fix scheme added and integrated into Strategy
+    with automatic creation and use upon None
+
+commit f2a2405e1da4ae844ea914889eb4c0e695bf8cc2
+Date:   Thu Feb 5 23:21:25 2015 +0100
+
+    Broker setcash
+
+commit 3e9f48025df9cd3b8f0c02a096bf5674d085689e
+Date:   Thu Feb 5 22:43:12 2015 +0100
+
+    test3 better price buy output
+
+commit 4d24733e551a4eb4c0d8a88a30dd6da2e89b3095
+Date:   Thu Feb 5 22:35:51 2015 +0100
+
+    Broker, Order, CommissionInfo refactorin
+    
+    - Separated Order and CommissionInfo to separate mods
+    - Update module __init__.py to take the new modules into account
+    - Updated broker
+
+commit 298dcd0cc35d5f6340c13cb069ecee2f5df6c135
+Date:   Thu Feb 5 11:55:51 2015 +0100
+
+    Several broker correction improvements
+    
+    - Cash adjustment (for futures like products) sent outside of the order
+    check loop
+    - Several corrections
+    - CashAdjustment, Value calculation and Commission deduction all using a
+    CommissionInfo object related to the data for which the order is meant
+
+commit bce393d0f2cbacb34853a1c95639969b7df1b58e
+Date:   Thu Feb 5 11:10:40 2015 +0100
+
+    Added missing pass after comment if in strategy
+
+commit fa771ec81f4af3090ea121b0fa335b503e0dc76f
+Date:   Wed Feb 4 23:06:12 2015 +0100
+
+    Commission and more debug added to test3
+
+commit 6a680bd3f079f1cddf34e4c2e9290a2e82dfe529
+Date:   Wed Feb 4 23:04:22 2015 +0100
+
+    Commission Calculation
+    
+    - Added commision deduction after closing and opening positions
+
+commit 5aa66512af0f3d4eabd3af12479f90c5b9ac8026
+Date:   Wed Feb 4 23:03:48 2015 +0100
+
+    Openposition order update
+    
+    - Correct to use absolute remaining size to avoid accumulation
+
+commit 559d8c7d10a90d9e2c4c8e94424357112d573d0d
+Date:   Wed Feb 4 23:02:56 2015 +0100
+
+    Change to cashadjust logic
+    
+    - Allow usage of 0.0 for margin check
+
+commit 074f575d56d8e358d2a5a6d2863a7663db7a41b9
+Date:   Wed Feb 4 23:01:58 2015 +0100
+
+    Comment addition to sizing logic in "close"
+
+commit 8b849e0be4f04143c7dbd6741c4984a187f9866d
+Date:   Wed Feb 4 22:57:46 2015 +0100
+
+    CommInfo getcommission
+    
+    - Corrected logic with margin
+    - Added getcomm_pricesize to allow calculation with the 2 parameters
+    rather than an order
+
+commit 55511fbcd0b5054536f7e76547a705f0ca5632f6
+Date:   Wed Feb 4 22:56:46 2015 +0100
+
+    Market Orders cannot expire
+
+commit 393cb8b18a215ae6db9c91ba380fe592fe947a55
+Date:   Wed Feb 4 22:56:27 2015 +0100
+
+    Order correction type in super
+
+commit f4b49438850b48b1b4b1ecd861bc7d495aa7157b
+Date:   Wed Feb 4 22:55:46 2015 +0100
+
+    close (position) reimplemented
+
+commit 6eedd5777fa0f10913dfcd1109a405c0ebedb812
+Date:   Tue Feb 3 23:44:53 2015 +0100
+
+    Adapted to position renaming to getposition
+    
+    - Adapted to position renaming to getposition
+
+commit 7bfb67b002723768d38894cbcfd8f0357653d4a7
+Date:   Tue Feb 3 23:44:17 2015 +0100
+
+    Changed "data" fetching logic
+    
+    - Only the 1st data passed to the system (aka _clock) determines how
+    long the loop runs
+    - No attempt to run if no datas have been passed
+
+commit 305e63843b428b97fd166bfb0d9d4fe598540051
+Date:   Tue Feb 3 23:42:49 2015 +0100
+
+    Broker/Position interface changes in Strategy
+    
+    - Buy/Sell now accept a "None" data and default to using the 1st data
+    - Buy/Sell now have a default "size" of 1
+    - position method renamed to getposition
+    - close method added to close an existing position
+
+commit 09e255c45dcba71d662981cde73a5eb567b5ffdd
+Date:   Tue Feb 3 23:39:07 2015 +0100
+
+    Removal of __init__
+    
+    - __init__ "no" longer needed after MetaParams intercepts the params
+    before __new__
+
+commit 0fecedccbe85bb61f7660687bd96da9836341220
+Date:   Tue Feb 3 23:38:23 2015 +0100
+
+    Commission spelling corrections
+    
+    - Commission spelling corrections in class names and parameters
+
+commit c72bddd7d63c6522ffee013e0d4e0567fd047fd3
+Date:   Tue Feb 3 23:37:51 2015 +0100
+
+    MASmoothedNan
+    
+    - Variation of MASmoothed that outputs NAN if data is NAN
+    - Delay of feed value until enough non-NAN values have been accumulated
+    for a MovingAverageSimple to create the feed
+    - Renamed MAType to MAEnum
+
+commit 52dfd50ed52b802f33168d10ed0632e0cea75dac
+Date:   Tue Feb 3 23:35:59 2015 +0100
+
+    - LineCmpTo and LinesCmp
+    
+    - LineCmpTo compares a given data line to a value
+    - LinesCmp compares the lines of two datas
+
+commit 115ddd13732468c47555cd42a01fae8a51d8a861
+Date:   Tue Feb 3 23:35:10 2015 +0100
+
+    Param examination moved one level up
+    
+    - Instead of just before __init__ param examination for MetaParam'd
+    objects is done right before __new__
+    - Params are therefore never reaching object
+
+commit 895356138e207a4f14ba9262163bb8383a5ba9c8
+Date:   Tue Feb 3 23:30:29 2015 +0100
+
+    StdOut/Error flushing under win32
+    
+    - StdOut/Errr flushing under win32 to avoid delayed line output
+    - Added flushfile import to testbase to ensure all tests import it
+
+commit eaa8efaefc27a2e8bf48cb9983dd6a568d33ffa1
+Date:   Mon Feb 2 14:47:00 2015 +0100
+
+    Changed cerebro preload parameter to True
+
+commit 6127efd0c5e4384de58cd32505402d43be6be0ec
+Date:   Mon Feb 2 14:46:38 2015 +0100
+
+    Add temporary emacs files to .gitignore
+
+commit da2ac6804807640f6be269c4ea2454eb4e8397f9
+Date:   Mon Feb 2 14:44:46 2015 +0100
+
+    Comments to feedbase
+    
+    - Comments about preloading
+
+commit d8061cc49c2be420a46ac3dd71bccde35f206801
+Date:   Mon Feb 2 14:44:15 2015 +0100
+
+    Default Broker in Strategy
+    
+    - Set always a default broker for a Strategy (bound to change)
+    - Added a "getposition" alias for Strategy.position method
+
+commit 46f98169c4d65bdb521560dafeda62ccb6387310
+Date:   Mon Feb 2 14:43:04 2015 +0100
+
+    Refactoring of LineXXX Indicators
+    
+    - Created _LineBase
+    - Refactored and simplfied LineBinder, LineDivision and LineDifference
+    by having _LineBase as base class
+
+commit 5fa0d2d56707556f86d859844d5a129dca7338d0
+Date:   Sun Feb 1 21:32:42 2015 +0100
+
+    Initial plotting support
+    
+    - Added plot function to linebuffer which relies on getzero to return
+    plottable values
+    - Slightly modified cerebro strategy instance storage to access them
+    after a run
+
+commit 6f88b5140a870a0f4030709df7bbc698660f8944
+Date:   Sat Jan 31 10:00:21 2015 +0100
+
+    Correction to test leftover line
+
+commit 505777454e1f2367dd46954fbc124973178ff959
+Date:   Sat Jan 31 09:59:15 2015 +0100
+
+    Lookahead to the end support
+    
+    - Lookahead would break if x bars were requested and less than x bars
+    were remaining
+    - A LineBuffer can be extended to avoid that
+    - Cerebro will extend datas according to the lookahead parameter before
+    running through the loop
+    - Cerebro now uses metabase.MetaParams for configuration and hence
+    parameters to run and runpreload have been removed
+
+commit 784522e35415153f18d2a4e08bbeefaa2def8684
+Date:   Sat Jan 31 09:18:43 2015 +0100
+
+    CR/LF cleaning up
+
+commit 29f337b41e26420e23a6ccb2c1751ba70e75674a
+Date:   Fri Jan 30 20:29:41 2015 +0100
+
+    Stop and StopLimit order
+    
+    - Stop orders trying execution in same bar
+    - StopLimit orders trying execution in same bar in possible cases
+
+commit ad05baa56fa5736c4ab3b221d4d7a0346878bbed
+Date:   Thu Jan 29 13:26:15 2015 +0100
+
+    Broker and Test Corrections
+    
+    - Small changes to dt passing in broker (parameter reordering)
+    - Correction in test3
+
+commit 0424a22651b7ebe33ac2199dae82a94b240023f7
+Date:   Thu Jan 29 13:22:06 2015 +0100
+
+    Broker order date annotation
+    
+    - Changed the level at which the datetime for annotation is extracted
+    from the data
+
+commit d58d353b4e1acbb472d893b39b6ce7718fc4c2de
+Date:   Thu Jan 29 11:33:22 2015 +0100
+
+    Small import leftofer in test
+    
+    - Small import leftofer in test
+
+commit c2059ca599a13fd32e5055684f2d7a809a582461
+Date:   Thu Jan 29 11:32:43 2015 +0100
+
+    Test Changes
+    
+    - Changes imports styles for backtrader things
+    - Adapted test3 to new Feed/DataFeed model
+
+commit 88f837b7416b701449a9253869b148026c1bfa73
+Date:   Thu Jan 29 11:15:25 2015 +0100
+
+    test changes
+    
+    - Adapted to new Feed / DataFeed concept
+
+commit d23a39b2a1d699175f2a17ddf7847ae9277402c1
+Date:   Thu Jan 29 11:13:43 2015 +0100
+
+    Feed and DataFeed changes
+    
+    - Reimplemented the Feed, DataFeed concept to fit with Cerebro only
+    accepting Datas
+    - DataFeeds carry a "_name" parameter (from LinesSeries/DataSeries) to
+    allow identification in broker
+    - Parameters shared amongst a Feed and DataFeed to avoid duplication of
+    text
+    - Added Base class for CSV readers to ease up implementation of further
+    readers
+    - Reimplemented MyCSV and Yahoo Feeds and DataFeeds
+    - Removed Yahoo "savetofile" functionality (must implemented as
+    independent tool)
+
+commit 488a3d5f4c038dd902abca6c8bfee01d93751bb3
+Date:   Thu Jan 29 11:10:28 2015 +0100
+
+    lineseries
+    
+    - readded a init function to avoid calling "object" with arguments
+
+commit f341e4095c665f5c7ce6eb3f3548a3b5f82e35fb
+Date:   Thu Jan 29 11:09:58 2015 +0100
+
+    lineiterator changes
+    
+    - Using now metabase logic to find the creating entity (_owner)
+
+commit ef84ded38e12b0f20870214657fa3157e8f6d33f
+Date:   Thu Jan 29 11:09:13 2015 +0100
+
+    cerebro changes
+    
+    - Direct Feed addition removed, now only indirect through a data source
+    - preload parameter for run to decide if data sources must preload all
+    available data or bar by bar
+    - runpreload function to call run with preload
+    - changed loop condition (to be further checked for 1st data possibly
+    - removed "once". the model for it has to be clarified
+
+commit ebcbfc2ae693cb7fbf0587a7691baeced2f48d5a
+Date:   Thu Jan 29 11:06:05 2015 +0100
+
+    metabase additions
+    
+    - findowner function to take out of metaclasses the logic to find the
+    creating entity
+    - Params can now return as a dict the current parameter values
+    _getkwargs
+
+commit 96767338a38feff34bcaa568c9a295e10273285d
+Date:   Mon Jan 26 15:36:06 2015 +0100
+
+    Broker support for Commission/Margin Schemes
+    
+    -- Small correction to MetaParams base class (module name was there)
+    -- yahoo feed url construction reworked
+    -- broker order statuses reworked
+    -- broker support for commission/margin check schemes and support for
+    futures
+
+commit e94fdadf5bd65596ef55a04c0654de97662df492
+Date:   Sat Jan 24 15:58:29 2015 +0100
+
+    Generalized MetaParams and removed "extend"
+    
+    - Moved root metaclass to a MetaBase class
+    - Moved MetaParams to be first subclass of it
+    - Used MetaParams as Metaclass of root class "LineSeries"
+    - Removed "extend" (inheritance is working find across metaclasses and
+    self can be passed as indicator with no recursion). No longer needed
+
+commit b5ecaa5a0b4e766219bd4a3e409d09dd6c6cb3f7
+Date:   Sat Jan 24 10:30:20 2015 +0100
+
+    Moving Averages and MACD cleaning up
+    
+    - Moving Averages simplification and removal of leftovers
+    - MACD simplification and removal of leftovers
+
+commit a041dbbdcb597beaec8b4e38c67f6982891293fe
+Date:   Sat Jan 24 09:29:19 2015 +0100
+
+    Automatic Datas Injection to LineIterators and automatic baseclass __init__ invocation
+    
+    - datas injected automatically into LineIterators as self.datas
+    - clock recognition from datas unified in LineIterators from Strategy
+    and Indicator
+    - cleared Indicator and no longer needed Naked stuff
+    - adapted existing indicators to the new datas paradigm
+    - delayed strategy creation in cerebro until run to be able to pass the
+    "datas"
+    - simplified getvalue inbroker
+    - added a LineBinder object to be able to place linebindings as
+    indicators before any other indicator
+    - removed _datas given that datas are now public for lineiterators
+    - clock source is 1st data found in args instead of being first arg
+    - automatic baseclass __init__ invocation for LineIterators
+
+commit 0838948b74a8b961850248274e7d8640c26393b4
+Date:   Thu Jan 22 23:28:02 2015 +0100
+
+    Broker Params
+    
+    - Separated params from LineIterator
+    - Added "params" technology from LineIterator to BrokerBack
+    - Cleared "Parameter" leftover imports
+    - Cleared "naked" leftovers and checked passing self as "data" generates
+    no recursion
+    - MACD has 3 potential implementations
+    -- Regular inheritance
+    -- LineDifference with self
+    -- extension
+
+commit 128bde55d0b91bbb2ca7a8b8ecfc6630ed33da48
+Date:   Thu Jan 22 15:12:03 2015 +0100
+
+    Extralines corrected and LineIterator next loop
+    
+    - Corrected typos in extralines implementation - now working
+    - Strategy can now use a default "extraline" to have a clock and length
+    like any indicator/data
+    - Improved next loop by checking in LinesIterator postinit if clock is
+    an indicator
+
+commit e515735cfa6dae17d668d445859d55f341726142
+Date:   Wed Jan 21 00:41:59 2015 +0100
+
+    LineBuffer Reimplementation and Date/Time Merging
+    
+    - Removed RingBuffer
+    - Added Deque and List based LineBuffer implementations
+    - LineBuffer factory
+    - Removal of _linecls class attribute
+    - DataSeries merging of date and time lines into datetime
+    - Adapted broker and tests to datetime line merger
+
+commit 8928bc4af600940b59095796fe063cf09a9968ea
+Date:   Tue Jan 20 22:27:47 2015 +0100
+
+    Added Limit, Close Orders to Broker and Expiry
+
+commit d123434b629326a16f2178f9fb37826eaa11e7db
+Date:   Mon Jan 19 15:03:25 2015 +0100
+
+    Broker Reimplementation
+    
+    - Broker support multiple positions (one per data)
+    - Broker notifies the order submitter when the order status changes
+    - Changed from "float" to "double" in the line array
+    - Added longer test data
+    - Reworked test3 for the new broker implementation
+    - Round down to 2 decimals in yahoofeed ... must be better implemented
+    - Strategy assigns a default broker in the background if needed (can be
+    None)
+
+commit 9b77229163e358ce1425817e559669a9f2f2e4d2
+Date:   Sat Jan 17 10:29:27 2015 +0100
+
+    Indicator Auto-Registration
+    
+    - Removed instance scanning for sub-indicators in metaclass
+    - Indicators auto-register by looking into the outer frames simplifiying
+    the entire logic
+    - Refactoring of metaclasses "obj" to "_obj" to ensure no collision with
+    user variables during frame scanning
+
+commit 0632a3a76779d431ddedbb7de5be367e7259bf91
+Date:   Sat Jan 17 00:51:28 2015 +0100
+
+    extralines implemented
+    
+    extra "unnamed" lines can be added to indicators/strategies with a
+    "extralines" declaration in the class
+
+commit 4212df7712e7713828b71ad76773ad844e007713
+Date:   Sat Jan 17 00:10:59 2015 +0100
+
+    lines and params reimplementation
+    
+    - Re-implemented how the "lines" class attribute is managed during class
+    creation
+    - Changed the Lines container from collections.defaultdict to list
+    - Re-implemented the parameters for LineIterators to mimic the "lines"
+    declaration (a tuple of tuple pairs) to make it easier an readable to
+    declare parameters
+    - Re-implemented parameter management during class creation
+    - "extend" policy made consistent for lines and params (placed after
+    base class and before new defined)
+    - Adapted existing indicators
+
+commit 0f08531fe2b0d4d89d4f02101314a835aebef1f5
+Date:   Thu Jan 15 00:22:47 2015 +0100
+
+    Initial Commit
+    
+    ATR, MACD, RSI, Stochastic, MovingAverages (Simple, Exponential,
+    Smoothed, Weighted)
+    
+    Yahoo Feed implemenation (online, file) and a basic broker
+    implemenation.
+    
+    A simple "Cerebro" system putting all pieces together
+
+commit 7adb0e99c30373d41aa4390edddacd332b3eab0c
+Date:   Sat Jan 10 08:14:52 2015 +0100
+
+    Initial commit
